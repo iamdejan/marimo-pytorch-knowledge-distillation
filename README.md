@@ -1,3 +1,8 @@
+---
+title: Readme
+marimo-version: 0.23.13
+---
+
 # Python Pixi Template
 
 This is a template repository for Python-based projects, using Pixi as a version manager for Python.

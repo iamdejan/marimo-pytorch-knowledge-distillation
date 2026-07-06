@@ -1,0 +1,55 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.23.13",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "ede8da62fecd3fb025f79878a2ff6c71",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"knolwedge-distillation-with-pytorch\">Knolwedge Distillation with PyTorch</h1>\n<span class=\"paragraph\">Reference: <a href=\"https://docs.pytorch.org/tutorials/beginner/knowledge_distillation_tutorial.html\" rel=\"noopener noreferrer\" target=\"_blank\">Knowledge Distillation Tutorial</a></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "85942c926095405c78701575d9d3a2ef",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Using cuda device\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    }
+  ]
+}
