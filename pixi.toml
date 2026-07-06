@@ -16,8 +16,8 @@ python = ">=3.13,<3.14"
 numpy = ">=2.0.0,<3"
 nbformat = ">=5.10.4,<6"
 ruff = ">=0.15.5,<0.16"
-pytest = ">=9.0.2,<10"
 pre-commit = ">=4.5.1,<5"
+ty = ">=0.0.56,<0.0.57"
 
 [target.default.dependencies]
 pytorch-gpu = ">=2.10"

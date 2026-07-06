@@ -33,7 +33,20 @@
     },
     {
       "id": "vblA",
-      "code_hash": "85942c926095405c78701575d9d3a2ef",
+      "code_hash": "1925a2f87c91df426826c468f7be24c3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"load-pytorch\">Load PyTorch</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "f0050f0e944fceec2be331cd7e76f6b6",
       "outputs": [
         {
           "type": "data",
@@ -47,6 +60,612 @@
           "type": "stream",
           "name": "stdout",
           "text": "Using cuda device\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "5aafde966a09d2f81be5ed0608e7836b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"prepare-preprocessing-and-load-dataset\">Prepare Preprocessing and Load Dataset</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "f7633863e9627649e7de33ed7d0f2082",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "01f9946ff2f75f3be16d3399c274882b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "e8b5dfbc7d14abd74d059cbd2d72c7d4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>Dataset CIFAR10\n    Number of datapoints: 50000\n    Root location: ./data\n    Split: Train\n    StandardTransform\nTransform: Compose(\n               ToTensor()\n               Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])\n           )</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "6725bba2907f61f4730d39d405905a95",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>Dataset CIFAR10\n    Number of datapoints: 10000\n    Root location: ./data\n    Split: Test\n    StandardTransform\nTransform: Compose(\n               ToTensor()\n               Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])\n           )</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "d6ac4cb1080cc55b73a733d11f8324ad",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"dataloader\">DataLoader</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "34c5dee52505457b826035bf406ac0da",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "6c6066b1d77f0aed6fd1820553e0ce9f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"model-classes\">Model classes</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "d7c48c626a7e9c067ac31dadee9d7fc0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "e6261b915e12191e052224801c3bebd1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "ae65b27ccd3060a1cdee7080008f8e01",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"utility-functions\">Utility functions</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "276ad6c381d2de9f022e1eb737e4d89c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "4e159d3d034bd0c062a74a44cd8a1a55",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "\u001b[33m[W 260706 14:53:49 compiler:352]\u001b(B\u001b[m pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "90dcb4f82414c32be53c1f17ab774bf5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"train-and-test-the-model\">Train and test the model</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "49c66217eb7117c07c8388cfccc8acf8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:53:50 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:53:54 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 1/10, Loss = 1.3345840603799162\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:54:08 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:54:12 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 2/10, Loss = 0.8617986318705332\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:54:26 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:54:29 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 3/10, Loss = 0.6682826461237105\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:54:43 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:54:47 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 4/10, Loss = 0.523132049137979\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:55:00 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:55:04 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 5/10, Loss = 0.3973442633514819\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:55:18 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:55:22 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 6/10, Loss = 0.2995096883353065\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:55:35 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:55:39 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 7/10, Loss = 0.20937969522250582\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:55:52 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:55:56 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 8/10, Loss = 0.1625551141874717\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:56:10 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:56:13 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 9/10, Loss = 0.1353311138441953\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:56:27 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:56:31 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 10/10, Loss = 0.11417283767553242\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:56:44 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:56:47 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Test Accuracy: 75.00%\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "17d2fa2e00d9ef3daed6fde8e0501455",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "2bd823a3c7b374e268041d27458a5f36",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">We instantiate one more lightweight network model to compare their performances. Back propagation is sensitive to weight initialization, so we need to make sure these two networks have the exact same initialization.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "4c22bf4012fec5ad85d80b2662b0ae6c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ecfG",
+      "code_hash": "8bdce678480b12f2a13bbb8354d2b26e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Norm of 1st layer of nn_light: 2.327361822128296\nNorm of 1st layer of new_nn_light: 2.327361822128296\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "Pvdt",
+      "code_hash": "b219ba4755eaf201bfe8641949f16e45",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Print the total number of parameters in each model:</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZBYS",
+      "code_hash": "cff41e2b0af2fcabceb842b2f86093f7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "DeepNN parameters: 1,186,986\nLightNN parameters: 267,738\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "aLJB",
+      "code_hash": "99847b25f26f6083339d5f2e088a60a9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Train and test the lightweight network with cross entropy loss:</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nHfw",
+      "code_hash": "6a14f47b35e2a460d64c2a6f4d4da5d4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:56:53 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:56:57 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 1/10, Loss = 1.4680844517924903\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:57:06 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:57:10 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 2/10, Loss = 1.1541218397867343\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:57:19 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:57:23 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 3/10, Loss = 1.0228411823587344\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:57:32 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:57:36 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 4/10, Loss = 0.9198721168596117\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:57:46 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:57:49 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 5/10, Loss = 0.8466486182359173\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:57:59 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:58:03 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 6/10, Loss = 0.7785667190161507\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:58:12 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:58:16 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 7/10, Loss = 0.7135324127533856\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:58:25 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:58:29 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 8/10, Loss = 0.6558807129445283\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:58:39 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:58:43 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 9/10, Loss = 0.6017790054116408\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:58:52 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:58:56 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 10/10, Loss = 0.5533558486215294\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260706 14:59:05 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 14:59:08 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Test Accuracy: 70.75%\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "xXTn",
+      "code_hash": "1fdc5051e4ffbc5c1b07c33451627c9a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Teacher accuracy: 75.00%\nStudent accuracy: 70.75%\n",
           "mimetype": "text/plain"
         }
       ]
