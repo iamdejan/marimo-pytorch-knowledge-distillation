@@ -177,7 +177,7 @@
     },
     {
       "id": "Hstk",
-      "code_hash": "ea224338816c6d9440d4540a5e6a2c51",
+      "code_hash": "a5a14f7dc6d374d79642f6f1aeaabf40",
       "outputs": [
         {
           "type": "data",
@@ -268,7 +268,7 @@
         {
           "type": "stream",
           "name": "stderr",
-          "text": "\u001b[33m[W 260707 14:07:32 compiler:352]\u001b(B\u001b[m pytest is not installed, skipping assertion rewriting\n",
+          "text": "\u001b[33m[W 260707 14:32:13 compiler:352]\u001b(B\u001b[m pytest is not installed, skipping assertion rewriting\n",
           "mimetype": "text/plain"
         }
       ]
@@ -300,8 +300,134 @@
       "console": [
         {
           "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:32:14 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:32:14 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:32:17 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:32:17 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
           "name": "stdout",
-          "text": "Epoch 1/10, Loss = 1.3974782518108788\nEpoch 2/10, Loss = 0.9278644193773684\nEpoch 3/10, Loss = 0.7152334691770851\nEpoch 4/10, Loss = 0.5709185130760798\nEpoch 5/10, Loss = 0.4526398703265373\nEpoch 6/10, Loss = 0.3433163534954686\nEpoch 7/10, Loss = 0.24998186305736947\nEpoch 8/10, Loss = 0.19040030144783845\nEpoch 9/10, Loss = 0.1632516263886486\nEpoch 10/10, Loss = 0.13043279217941986\nTest Accuracy: 74.75%\n",
+          "text": "Epoch 1/10, Loss = 1.3974782518108788\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:32:31 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:32:31 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:32:34 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:32:34 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 2/10, Loss = 0.9278644193773684\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:32:47 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:32:47 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:32:50 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:32:50 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 3/10, Loss = 0.7152334691770851\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:33:04 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:33:04 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:33:07 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:33:07 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 4/10, Loss = 0.5709185130760798\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:33:20 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:33:20 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:33:23 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:33:23 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 5/10, Loss = 0.4526398703265373\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:33:36 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:33:36 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:33:40 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:33:40 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 6/10, Loss = 0.3433163534954686\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:33:53 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:33:53 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:33:56 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:33:56 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 7/10, Loss = 0.24998186305736947\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:34:09 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:34:09 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:34:12 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:34:13 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 8/10, Loss = 0.19040030144783845\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:34:26 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:34:26 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:34:29 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:34:29 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 9/10, Loss = 0.1632516263886486\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:34:42 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:34:42 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:34:45 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:34:45 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 10/10, Loss = 0.13043279217941986\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:34:58 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:34:58 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:01 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:01 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Test Accuracy: 74.75%\n",
           "mimetype": "text/plain"
         }
       ]
@@ -425,8 +551,134 @@
       "console": [
         {
           "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:35:06 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:06 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:09 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:09 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
           "name": "stdout",
-          "text": "Epoch 1/10, Loss = 1.4699582742608113\nEpoch 2/10, Loss = 1.147582862840589\nEpoch 3/10, Loss = 1.000320653019049\nEpoch 4/10, Loss = 0.9039682962400529\nEpoch 5/10, Loss = 0.8231865765188661\nEpoch 6/10, Loss = 0.7540609155164655\nEpoch 7/10, Loss = 0.6953719047176868\nEpoch 8/10, Loss = 0.6393959798928722\nEpoch 9/10, Loss = 0.5909901214834979\nEpoch 10/10, Loss = 0.5399060561833784\nTest Accuracy: 71.12%\n",
+          "text": "Epoch 1/10, Loss = 1.4699582742608113\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:35:17 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:17 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:21 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:21 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 2/10, Loss = 1.147582862840589\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:35:29 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:29 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:32 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:32 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 3/10, Loss = 1.000320653019049\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:35:41 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:41 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:44 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:44 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 4/10, Loss = 0.9039682962400529\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:35:53 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:53 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:56 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:35:56 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 5/10, Loss = 0.8231865765188661\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:36:04 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:04 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:07 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:07 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 6/10, Loss = 0.7540609155164655\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:36:16 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:16 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:20 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:20 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 7/10, Loss = 0.6953719047176868\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:36:28 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:28 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:31 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:31 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 8/10, Loss = 0.6393959798928722\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:36:40 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:40 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:43 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:43 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 9/10, Loss = 0.5909901214834979\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:36:51 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:51 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:54 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:36:54 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 10/10, Loss = 0.5399060561833784\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:37:02 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:03 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:05 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:05 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Test Accuracy: 71.12%\n",
           "mimetype": "text/plain"
         }
       ]
@@ -453,12 +705,12 @@
     },
     {
       "id": "NCOB",
-      "code_hash": "7bbef70a2aab5257ebb6dfd1be3077e3",
+      "code_hash": "377cb041186f7fdeeff086c9b30b9ed8",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "## Knowledge distillation\n\nNow let\u2019s try to improve the test accuracy of the student network by incorporating the teacher. Knowledge distillation is a straightforward technique to achieve this, based on the fact that both networks output a probability distribution over our classes. Therefore, the two networks share the same number of output neurons. The method works by incorporating an additional loss into the traditional cross entropy loss, which is based on the softmax output of the teacher network. **The assumption is that the output activations of a properly trained teacher network carry additional information that can be leveraged by a student network during training**. The original work suggests that utilizing ratios of smaller probabilities in the soft targets can help achieve the underlying objective of deep neural networks, which is to create a similarity structure over the data where similar objects are mapped closer together."
+            "text/markdown": "## Knowledge distillation\n\nNow let's try to improve the test accuracy of the student network by incorporating the teacher. Knowledge distillation is a straightforward technique to achieve this, based on the fact that both networks output a probability distribution over our classes. Therefore, the two networks share the same number of output neurons. The method works by incorporating an additional loss into the traditional cross entropy loss, which is based on the softmax output of the teacher network. **The assumption is that the output activations of a properly trained teacher network carry additional information that can be leveraged by a student network during training**. The original work suggests that utilizing ratios of smaller probabilities in the soft targets can help achieve the underlying objective of deep neural networks, which is to create a similarity structure over the data where similar objects are mapped closer together."
           }
         }
       ],
@@ -530,20 +782,146 @@
       "console": [
         {
           "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:37:10 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:10 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:13 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:13 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
           "name": "stdout",
-          "text": "Epoch 1/10, Loss: 2.426335568623165\nEpoch 2/10, Loss: 1.8506279753906953\nEpoch 3/10, Loss: 1.598138683592267\nEpoch 4/10, Loss: 1.4386574447612324\nEpoch 5/10, Loss: 1.3191257992668834\nEpoch 6/10, Loss: 1.2159982303829144\nEpoch 7/10, Loss: 1.1227675360791824\nEpoch 8/10, Loss: 1.0356456856898335\nEpoch 9/10, Loss: 0.9564500638591055\nEpoch 10/10, Loss: 0.8875487555018471\nTest Accuracy: 71.17%\nTeacher accuracy: 74.75%\nStudent accuracy without teacher: 71.12%\nStudent accuracy with CE + KD: 71.17%\n",
+          "text": "Epoch 1/10, Loss: 2.426335568623165\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:37:22 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:22 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:25 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:25 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 2/10, Loss: 1.8506279753906953\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:37:34 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:34 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:37 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:37 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 3/10, Loss: 1.598138683592267\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:37:46 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:46 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:49 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:49 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 4/10, Loss: 1.4386574447612324\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:37:59 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:37:59 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:02 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:02 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 5/10, Loss: 1.3191257992668834\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:38:11 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:11 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:14 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:14 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 6/10, Loss: 1.2159982303829144\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:38:23 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:23 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:26 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:26 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 7/10, Loss: 1.1227675360791824\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:38:35 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:35 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:38 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:39 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 8/10, Loss: 1.0356456856898335\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:38:47 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:47 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:51 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:38:51 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 9/10, Loss: 0.9564500638591055\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:39:00 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:00 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:03 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:03 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 10/10, Loss: 0.8875487555018471\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:39:11 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:11 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:14 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:14 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Test Accuracy: 71.17%\nTeacher accuracy: 74.75%\nStudent accuracy without teacher: 71.12%\nStudent accuracy with CE + KD: 71.17%\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
       "id": "wlCL",
-      "code_hash": "8d98d457482cf9647dbd43bfadf7e2cf",
+      "code_hash": "bf04dda6a0da2220f75241c02f91f3a1",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "## Cosine loss minimization run\n\nFeel free to play around with the temperature parameter that controls the softness of the softmax function and the loss coefficients. In neural networks, it is easy to include additional loss functions to the main objectives to achieve goals like better generalization. Let\u2019s try including an objective for the student, but now let\u2019s focus on their hidden states rather than their output layers. Our goal is to convey information from the teacher\u2019s representation to the student by including a naive loss function, whose minimization implies that the flattened vectors that are subsequently passed to the classifiers have become more similar as the loss decreases. Of course, the teacher does not update its weights, so the minimization depends only on the student\u2019s weights. The rationale behind this method is that we are operating under the assumption that the teacher model has a better internal representation that is unlikely to be achieved by the student without external intervention, therefore we artificially push the student to mimic the internal representation of the teacher. Whether or not this will end up helping the student is not straightforward, though, because pushing the lightweight network to reach this point could be a good thing, assuming that we have found an internal representation that leads to better test accuracy, but it could also be harmful because the networks have different architectures and the student does not have the same learning capacity as the teacher. In other words, there is no reason for these two vectors, the student\u2019s and the teacher\u2019s to match per component. The student could reach an internal representation that is a permutation of the teacher\u2019s and it would be just as efficient. Nonetheless, we can still run a quick experiment to figure out the impact of this method. We will be using the CosineEmbeddingLoss which is given by the following formula:"
+            "text/markdown": "## Cosine loss minimization run\n\nFeel free to play around with the temperature parameter that controls the softness of the softmax function and the loss coefficients. In neural networks, it is easy to include additional loss functions to the main objectives to achieve goals like better generalization. Let's try including an objective for the student, but now let's focus on their hidden states rather than their output layers. Our goal is to convey information from the teacher's representation to the student by including a naive loss function, whose minimization implies that the flattened vectors that are subsequently passed to the classifiers have become more similar as the loss decreases. Of course, the teacher does not update its weights, so the minimization depends only on the student's weights. The rationale behind this method is that we are operating under the assumption that the teacher model has a better internal representation that is unlikely to be achieved by the student without external intervention, therefore we artificially push the student to mimic the internal representation of the teacher. Whether or not this will end up helping the student is not straightforward, though, because pushing the lightweight network to reach this point could be a good thing, assuming that we have found an internal representation that leads to better test accuracy, but it could also be harmful because the networks have different architectures and the student does not have the same learning capacity as the teacher. In other words, there is no reason for these two vectors, the student's and the teacher's to match per component. The student could reach an internal representation that is a permutation of the teacher's and it would be just as efficient. Nonetheless, we can still run a quick experiment to figure out the impact of this method. We will be using the CosineEmbeddingLoss which is given by the following formula:"
           }
         }
       ],
@@ -551,12 +929,12 @@
     },
     {
       "id": "kqZH",
-      "code_hash": "837851b1cc7a086a36dc0cf695223c8d",
+      "code_hash": "9be55f5869d96ad0de014b9295fbf6dc",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "$$\nloss(x, y) = \\left\\{ \\begin{array}{cl}\n1 - cos(x_1, x_2), & \\text{if } y = 1 \\\\\nmax(0, cos(x_1, x_2) - \\text{margin}), & \\text{if } y = -1 \\\\\n\\end{array} \\right.\n$$"
+            "text/markdown": "$$\n\\text{loss}(x, y) = \\left\\{ \\begin{array}{cl}\n1 - cos(x_1, x_2), & \\text{if } y = 1 \\\\\nmax(0, cos(x_1, x_2) - \\text{margin}), & \\text{if } y = -1 \\\\\n\\end{array} \\right.\n$$"
           }
         }
       ],
@@ -564,12 +942,12 @@
     },
     {
       "id": "wAgl",
-      "code_hash": "18cf71a7dab7395049dbf771fbcfdf85",
+      "code_hash": "9c33316b5afe0ccf58977d31710d8d07",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "Obviously, there is one thing that we need to resolve first. When we applied distillation to the output layer we mentioned that both networks have the same number of neurons, equal to the number of classes. However, this is not the case for the layer following our convolutional layers. Here, the teacher has more neurons than the student after the flattening of the final convolutional layer. Our loss function accepts two vectors of equal dimensionality as inputs, therefore we need to somehow match them. We will solve this by including an average pooling layer after the teacher\u2019s convolutional layer to reduce its dimensionality to match that of the student."
+            "text/markdown": "Obviously, there is one thing that we need to resolve first. When we applied distillation to the output layer we mentioned that both networks have the same number of neurons, equal to the number of classes. However, this is not the case for the layer following our convolutional layers. Here, the teacher has more neurons than the student after the flattening of the final convolutional layer. Our loss function accepts two vectors of equal dimensionality as inputs, therefore we need to somehow match them. We will solve this by including an average pooling layer after the teacher's convolutional layer to reduce its dimensionality to match that of the student."
           }
         }
       ],
@@ -741,7 +1119,7 @@
         {
           "type": "stream",
           "name": "stderr",
-          "text": "\u001b[33m[W 260707 14:14:16 compiler:352]\u001b(B\u001b[m pytest is not installed, skipping assertion rewriting\n",
+          "text": "\u001b[33m[W 260707 14:39:18 compiler:352]\u001b(B\u001b[m pytest is not installed, skipping assertion rewriting\n",
           "mimetype": "text/plain"
         }
       ]
@@ -760,8 +1138,134 @@
       "console": [
         {
           "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:39:19 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:19 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:22 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:22 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
           "name": "stdout",
-          "text": "Epoch 1/10, Loss: 1.301514346886169\nEpoch 2/10, Loss: 1.0561232839703865\nEpoch 3/10, Loss: 0.9531420345806405\nEpoch 4/10, Loss: 0.8764619877576219\nEpoch 5/10, Loss: 0.8264229427213254\nEpoch 6/10, Loss: 0.778819742867404\nEpoch 7/10, Loss: 0.7407438739791246\nEpoch 8/10, Loss: 0.7084508797396785\nEpoch 9/10, Loss: 0.6773196429090427\nEpoch 10/10, Loss: 0.6487434914959666\nTest accuracy: 71.46%\n",
+          "text": "Epoch 1/10, Loss: 1.301514346886169\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:39:32 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:32 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:35 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:35 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 2/10, Loss: 1.0561232839703865\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:39:44 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:44 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:48 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:48 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 3/10, Loss: 0.9531420345806405\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:39:57 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:39:57 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:40:01 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:40:01 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 4/10, Loss: 0.8764619877576219\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:40:10 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:40:10 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:40:13 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:40:13 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 5/10, Loss: 0.8264229427213254\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:40:23 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:40:23 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:40:27 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:40:27 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 6/10, Loss: 0.778819742867404\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:42:24 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:42:24 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:42:28 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:42:28 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 7/10, Loss: 0.7407438739791246\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:42:37 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:42:37 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:42:41 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:42:41 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 8/10, Loss: 0.7084508797396785\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:42:50 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:42:50 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:42:54 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:42:54 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 9/10, Loss: 0.6773196429090427\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:43:04 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:43:04 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:43:07 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:43:07 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 10/10, Loss: 0.6487434914959666\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:43:17 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:43:17 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:43:19 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:43:19 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Test accuracy: 71.46%\n",
           "mimetype": "text/plain"
         }
       ]
@@ -781,12 +1285,12 @@
     },
     {
       "id": "tZnO",
-      "code_hash": "7921492dad84e194bc4afafbcb70fd37",
+      "code_hash": "bb5d4c97f3d059c7e6659f226c639b7f",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "We will provide a final example of training intervention by including an extra network called regressor. The objective is to first extract the feature map of the teacher after a convolutional layer, then extract a feature map of the student after a convolutional layer, and finally try to match these maps. However, this time, we will introduce a regressor between the networks to facilitate the matching process. The regressor will be trainable and ideally will do a better job than our naive cosine loss minimization scheme. Its main job is to match the dimensionality of these feature maps so that we can properly define a loss function between the teacher and the student. Defining such a loss function provides a teaching \u201cpath,\u201d which is basically a flow to back-propagate gradients that will change the student\u2019s weights. Focusing on the output of the convolutional layers right before each classifier for our original networks, we have the following shapes:"
+            "text/markdown": "We will provide a final example of training intervention by including an extra network called regressor. The objective is to first extract the feature map of the teacher after a convolutional layer, then extract a feature map of the student after a convolutional layer, and finally try to match these maps. However, this time, we will introduce a regressor between the networks to facilitate the matching process. The regressor will be trainable and ideally will do a better job than our naive cosine loss minimization scheme. Its main job is to match the dimensionality of these feature maps so that we can properly define a loss function between the teacher and the student. Defining such a loss function provides a teaching \u201cpath,\u201d which is basically a flow to back-propagate gradients that will change the student's weights. Focusing on the output of the convolutional layers right before each classifier for our original networks, we have the following shapes:"
           }
         }
       ],
@@ -866,12 +1370,12 @@
     },
     {
       "id": "EJmg",
-      "code_hash": "c1c7b28cdb5b3f87e8ca4b86fe8aeea9",
+      "code_hash": "09d4b3a4099e3dc89836dde998202f0e",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "After that, we have to update our train loop again. This time, we extract the regressor output of the student, the feature map of the teacher, we calculate the `MSE` on these tensors (they have the exact same shape so it\u2019s properly defined) and we back propagate gradients based on that loss, in addition to the regular cross entropy loss of the classification task."
+            "text/markdown": "After that, we have to update our train loop again. This time, we extract the regressor output of the student, the feature map of the teacher, we calculate the `MSE` on these tensors (they have the exact same shape so it's properly defined) and we back propagate gradients based on that loss, in addition to the regular cross entropy loss of the classification task."
           }
         }
       ],
@@ -904,20 +1408,146 @@
       "console": [
         {
           "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:43:24 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:43:24 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:43:28 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:43:28 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
           "name": "stdout",
-          "text": "Epoch 1/10, Loss: 1.3354538741623958\nEpoch 2/10, Loss: 0.7247414701734968\nEpoch 3/10, Loss: 0.5629884589206228\nEpoch 4/10, Loss: 0.45107074764073657\nEpoch 5/10, Loss: 0.36283701536295665\nEpoch 6/10, Loss: 0.29451709158737643\nEpoch 7/10, Loss: 0.2357697762796641\nEpoch 8/10, Loss: 0.20208236931458765\nEpoch 9/10, Loss: 0.1809339991882634\nEpoch 10/10, Loss: 0.16156046605094923\nTest accuracy: 73.95%\n",
+          "text": "Epoch 1/10, Loss: 1.3354538741623958\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:43:43 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:43:43 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:43:46 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:43:47 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 2/10, Loss: 0.7247414701734968\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:44:02 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:44:02 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:44:06 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:44:06 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 3/10, Loss: 0.5629884589206228\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:44:21 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:44:21 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:44:24 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:44:24 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 4/10, Loss: 0.45107074764073657\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:44:40 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:44:40 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:44:44 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:44:44 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 5/10, Loss: 0.36283701536295665\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:45:00 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:45:00 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:45:03 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:45:03 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 6/10, Loss: 0.29451709158737643\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:45:18 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:45:18 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:45:22 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:45:22 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 7/10, Loss: 0.2357697762796641\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:45:37 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:45:37 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:45:40 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:45:40 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 8/10, Loss: 0.20208236931458765\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:45:56 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:45:56 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:45:59 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:45:59 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 9/10, Loss: 0.1809339991882634\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:46:15 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:46:15 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:46:18 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:46:18 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Epoch 10/10, Loss: 0.16156046605094923\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 260707 14:46:33 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:46:33 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:46:36 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260707 14:46:36 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Test accuracy: 73.95%\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
       "id": "kLmu",
-      "code_hash": "c5538e44b89fd1471ef0196e87261a20",
+      "code_hash": "119f0f9431af3754368416e39c4dd387",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "It is expected that the final method will work better than `CosineLoss` because now we have allowed a trainable layer between the teacher and the student, which gives the student some wiggle room when it comes to learning, rather than pushing the student to copy the teacher\u2019s representation. Including the extra network is the idea behind hint-based distillation."
+            "text/markdown": "It is expected that the final method will work better than `CosineLoss` because now we have allowed a trainable layer between the teacher and the student, which gives the student some wiggle room when it comes to learning, rather than pushing the student to copy the teacher's representation. Including the extra network is the idea behind hint-based distillation."
           }
         }
       ],

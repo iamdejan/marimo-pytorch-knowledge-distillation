@@ -156,7 +156,7 @@ def _(test_dataset, torch, train_dataset):
         train_dataset,
         batch_size=128,
         shuffle=True,
-        num_workers=0,
+        num_workers=2,
         worker_init_fn=seed_worker,
         generator=g,
     )
@@ -164,7 +164,7 @@ def _(test_dataset, torch, train_dataset):
         test_dataset,
         batch_size=128,
         shuffle=False,
-        num_workers=0,
+        num_workers=2,
         worker_init_fn=seed_worker,
         generator=g,
     )
@@ -392,7 +392,7 @@ def _(mo):
     mo.md(r"""
     ## Knowledge distillation
 
-    Now let’s try to improve the test accuracy of the student network by incorporating the teacher. Knowledge distillation is a straightforward technique to achieve this, based on the fact that both networks output a probability distribution over our classes. Therefore, the two networks share the same number of output neurons. The method works by incorporating an additional loss into the traditional cross entropy loss, which is based on the softmax output of the teacher network. **The assumption is that the output activations of a properly trained teacher network carry additional information that can be leveraged by a student network during training**. The original work suggests that utilizing ratios of smaller probabilities in the soft targets can help achieve the underlying objective of deep neural networks, which is to create a similarity structure over the data where similar objects are mapped closer together.
+    Now let's try to improve the test accuracy of the student network by incorporating the teacher. Knowledge distillation is a straightforward technique to achieve this, based on the fact that both networks output a probability distribution over our classes. Therefore, the two networks share the same number of output neurons. The method works by incorporating an additional loss into the traditional cross entropy loss, which is based on the softmax output of the teacher network. **The assumption is that the output activations of a properly trained teacher network carry additional information that can be leveraged by a student network during training**. The original work suggests that utilizing ratios of smaller probabilities in the soft targets can help achieve the underlying objective of deep neural networks, which is to create a similarity structure over the data where similar objects are mapped closer together.
     """)
     return
 
@@ -522,7 +522,7 @@ def _(mo):
     mo.md(r"""
     ## Cosine loss minimization run
 
-    Feel free to play around with the temperature parameter that controls the softness of the softmax function and the loss coefficients. In neural networks, it is easy to include additional loss functions to the main objectives to achieve goals like better generalization. Let’s try including an objective for the student, but now let’s focus on their hidden states rather than their output layers. Our goal is to convey information from the teacher’s representation to the student by including a naive loss function, whose minimization implies that the flattened vectors that are subsequently passed to the classifiers have become more similar as the loss decreases. Of course, the teacher does not update its weights, so the minimization depends only on the student’s weights. The rationale behind this method is that we are operating under the assumption that the teacher model has a better internal representation that is unlikely to be achieved by the student without external intervention, therefore we artificially push the student to mimic the internal representation of the teacher. Whether or not this will end up helping the student is not straightforward, though, because pushing the lightweight network to reach this point could be a good thing, assuming that we have found an internal representation that leads to better test accuracy, but it could also be harmful because the networks have different architectures and the student does not have the same learning capacity as the teacher. In other words, there is no reason for these two vectors, the student’s and the teacher’s to match per component. The student could reach an internal representation that is a permutation of the teacher’s and it would be just as efficient. Nonetheless, we can still run a quick experiment to figure out the impact of this method. We will be using the CosineEmbeddingLoss which is given by the following formula:
+    Feel free to play around with the temperature parameter that controls the softness of the softmax function and the loss coefficients. In neural networks, it is easy to include additional loss functions to the main objectives to achieve goals like better generalization. Let's try including an objective for the student, but now let's focus on their hidden states rather than their output layers. Our goal is to convey information from the teacher's representation to the student by including a naive loss function, whose minimization implies that the flattened vectors that are subsequently passed to the classifiers have become more similar as the loss decreases. Of course, the teacher does not update its weights, so the minimization depends only on the student's weights. The rationale behind this method is that we are operating under the assumption that the teacher model has a better internal representation that is unlikely to be achieved by the student without external intervention, therefore we artificially push the student to mimic the internal representation of the teacher. Whether or not this will end up helping the student is not straightforward, though, because pushing the lightweight network to reach this point could be a good thing, assuming that we have found an internal representation that leads to better test accuracy, but it could also be harmful because the networks have different architectures and the student does not have the same learning capacity as the teacher. In other words, there is no reason for these two vectors, the student's and the teacher's to match per component. The student could reach an internal representation that is a permutation of the teacher's and it would be just as efficient. Nonetheless, we can still run a quick experiment to figure out the impact of this method. We will be using the CosineEmbeddingLoss which is given by the following formula:
     """)
     return
 
@@ -531,7 +531,7 @@ def _(mo):
 def _(mo):
     mo.md(r"""
     $$
-    loss(x, y) = \left\{ \begin{array}{cl}
+    \text{loss}(x, y) = \left\{ \begin{array}{cl}
     1 - cos(x_1, x_2), & \text{if } y = 1 \\
     max(0, cos(x_1, x_2) - \text{margin}), & \text{if } y = -1 \\
     \end{array} \right.
@@ -543,7 +543,7 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    Obviously, there is one thing that we need to resolve first. When we applied distillation to the output layer we mentioned that both networks have the same number of neurons, equal to the number of classes. However, this is not the case for the layer following our convolutional layers. Here, the teacher has more neurons than the student after the flattening of the final convolutional layer. Our loss function accepts two vectors of equal dimensionality as inputs, therefore we need to somehow match them. We will solve this by including an average pooling layer after the teacher’s convolutional layer to reduce its dimensionality to match that of the student.
+    Obviously, there is one thing that we need to resolve first. When we applied distillation to the output layer we mentioned that both networks have the same number of neurons, equal to the number of classes. However, this is not the case for the layer following our convolutional layers. Here, the teacher has more neurons than the student after the flattening of the final convolutional layer. Our loss function accepts two vectors of equal dimensionality as inputs, therefore we need to somehow match them. We will solve this by including an average pooling layer after the teacher's convolutional layer to reduce its dimensionality to match that of the student.
     """)
     return
 
@@ -807,7 +807,7 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    We will provide a final example of training intervention by including an extra network called regressor. The objective is to first extract the feature map of the teacher after a convolutional layer, then extract a feature map of the student after a convolutional layer, and finally try to match these maps. However, this time, we will introduce a regressor between the networks to facilitate the matching process. The regressor will be trainable and ideally will do a better job than our naive cosine loss minimization scheme. Its main job is to match the dimensionality of these feature maps so that we can properly define a loss function between the teacher and the student. Defining such a loss function provides a teaching “path,” which is basically a flow to back-propagate gradients that will change the student’s weights. Focusing on the output of the convolutional layers right before each classifier for our original networks, we have the following shapes:
+    We will provide a final example of training intervention by including an extra network called regressor. The objective is to first extract the feature map of the teacher after a convolutional layer, then extract a feature map of the student after a convolutional layer, and finally try to match these maps. However, this time, we will introduce a regressor between the networks to facilitate the matching process. The regressor will be trainable and ideally will do a better job than our naive cosine loss minimization scheme. Its main job is to match the dimensionality of these feature maps so that we can properly define a loss function between the teacher and the student. Defining such a loss function provides a teaching “path,” which is basically a flow to back-propagate gradients that will change the student's weights. Focusing on the output of the convolutional layers right before each classifier for our original networks, we have the following shapes:
     """)
     return
 
@@ -907,7 +907,7 @@ def _(nn, torch):
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    After that, we have to update our train loop again. This time, we extract the regressor output of the student, the feature map of the teacher, we calculate the `MSE` on these tensors (they have the exact same shape so it’s properly defined) and we back propagate gradients based on that loss, in addition to the regular cross entropy loss of the classification task.
+    After that, we have to update our train loop again. This time, we extract the regressor output of the student, the feature map of the teacher, we calculate the `MSE` on these tensors (they have the exact same shape so it's properly defined) and we back propagate gradients based on that loss, in addition to the regular cross entropy loss of the classification task.
     """)
     return
 
@@ -1002,7 +1002,7 @@ def _(
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    It is expected that the final method will work better than `CosineLoss` because now we have allowed a trainable layer between the teacher and the student, which gives the student some wiggle room when it comes to learning, rather than pushing the student to copy the teacher’s representation. Including the extra network is the idea behind hint-based distillation.
+    It is expected that the final method will work better than `CosineLoss` because now we have allowed a trainable layer between the teacher and the student, which gives the student some wiggle room when it comes to learning, rather than pushing the student to copy the teacher's representation. Including the extra network is the idea behind hint-based distillation.
     """)
     return
 

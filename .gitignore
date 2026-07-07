@@ -1,9 +1,6 @@
 # Dataset
 /data
 
-# PDF output
-*.pdf
-
 # pixi environments
 .pixi/*
 !.pixi/config.toml
