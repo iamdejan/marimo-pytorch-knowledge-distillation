@@ -25,7 +25,7 @@
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"knolwedge-distillation-with-pytorch\">Knolwedge Distillation with PyTorch</h1>\n<span class=\"paragraph\">Reference: <a href=\"https://docs.pytorch.org/tutorials/beginner/knowledge_distillation_tutorial.html\" rel=\"noopener noreferrer\" target=\"_blank\">Knowledge Distillation Tutorial</a></span></span>"
+            "text/markdown": "# Knolwedge Distillation with PyTorch\n\nReference: [Knowledge Distillation Tutorial](https://docs.pytorch.org/tutorials/beginner/knowledge_distillation_tutorial.html)"
           }
         }
       ],
@@ -38,7 +38,7 @@
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"load-pytorch\">Load PyTorch</h2></span>"
+            "text/markdown": "## Load PyTorch"
           }
         }
       ],
@@ -66,12 +66,12 @@
     },
     {
       "id": "lEQa",
-      "code_hash": "5aafde966a09d2f81be5ed0608e7836b",
+      "code_hash": "5c4d20268e2c1dcc1ab6ec2bef203787",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"prepare-preprocessing-and-load-dataset\">Prepare Preprocessing and Load Dataset</h2></span>"
+            "text/plain": ""
           }
         }
       ],
@@ -79,6 +79,19 @@
     },
     {
       "id": "PKri",
+      "code_hash": "5aafde966a09d2f81be5ed0608e7836b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "## Prepare Preprocessing and Load Dataset"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
       "code_hash": "f7633863e9627649e7de33ed7d0f2082",
       "outputs": [
         {
@@ -91,7 +104,7 @@
       "console": []
     },
     {
-      "id": "Xref",
+      "id": "SFPL",
       "code_hash": "01f9946ff2f75f3be16d3399c274882b",
       "outputs": [
         {
@@ -104,7 +117,7 @@
       "console": []
     },
     {
-      "id": "SFPL",
+      "id": "BYtC",
       "code_hash": "e8b5dfbc7d14abd74d059cbd2d72c7d4",
       "outputs": [
         {
@@ -117,7 +130,7 @@
       "console": []
     },
     {
-      "id": "BYtC",
+      "id": "RGSE",
       "code_hash": "6725bba2907f61f4730d39d405905a95",
       "outputs": [
         {
@@ -130,21 +143,21 @@
       "console": []
     },
     {
-      "id": "RGSE",
+      "id": "Kclp",
       "code_hash": "d6ac4cb1080cc55b73a733d11f8324ad",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"dataloader\">DataLoader</h2></span>"
+            "text/markdown": "## DataLoader"
           }
         }
       ],
       "console": []
     },
     {
-      "id": "Kclp",
-      "code_hash": "34c5dee52505457b826035bf406ac0da",
+      "id": "emfo",
+      "code_hash": "822c54b07bb119110169e5c155e251f6",
       "outputs": [
         {
           "type": "data",
@@ -153,24 +166,18 @@
           }
         }
       ],
-      "console": []
-    },
-    {
-      "id": "emfo",
-      "code_hash": "6c6066b1d77f0aed6fd1820553e0ce9f",
-      "outputs": [
+      "console": [
         {
-          "type": "data",
-          "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"model-classes\">Model classes</h2></span>"
-          }
+          "type": "stream",
+          "name": "stdout",
+          "text": "Successfully wrote utils.py!\n",
+          "mimetype": "text/plain"
         }
-      ],
-      "console": []
+      ]
     },
     {
       "id": "Hstk",
-      "code_hash": "d7c48c626a7e9c067ac31dadee9d7fc0",
+      "code_hash": "ea224338816c6d9440d4540a5e6a2c51",
       "outputs": [
         {
           "type": "data",
@@ -183,6 +190,32 @@
     },
     {
       "id": "nWHF",
+      "code_hash": "6c6066b1d77f0aed6fd1820553e0ce9f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "## Model classes"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "d7c48c626a7e9c067ac31dadee9d7fc0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
       "code_hash": "e6261b915e12191e052224801c3bebd1",
       "outputs": [
         {
@@ -195,20 +228,20 @@
       "console": []
     },
     {
-      "id": "iLit",
+      "id": "ROlb",
       "code_hash": "ae65b27ccd3060a1cdee7080008f8e01",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"utility-functions\">Utility functions</h2></span>"
+            "text/markdown": "## Utility functions"
           }
         }
       ],
       "console": []
     },
     {
-      "id": "ZHCJ",
+      "id": "qnkX",
       "code_hash": "276ad6c381d2de9f022e1eb737e4d89c",
       "outputs": [
         {
@@ -221,7 +254,7 @@
       "console": []
     },
     {
-      "id": "ROlb",
+      "id": "TqIu",
       "code_hash": "4e159d3d034bd0c062a74a44cd8a1a55",
       "outputs": [
         {
@@ -235,27 +268,27 @@
         {
           "type": "stream",
           "name": "stderr",
-          "text": "\u001b[33m[W 260706 19:14:58 compiler:352]\u001b(B\u001b[m pytest is not installed, skipping assertion rewriting\n",
+          "text": "\u001b[33m[W 260707 14:07:32 compiler:352]\u001b(B\u001b[m pytest is not installed, skipping assertion rewriting\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "qnkX",
+      "id": "Vxnm",
       "code_hash": "90dcb4f82414c32be53c1f17ab774bf5",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"train-and-test-the-model\">Train and test the model</h2></span>"
+            "text/markdown": "## Train and test the model"
           }
         }
       ],
       "console": []
     },
     {
-      "id": "TqIu",
-      "code_hash": "49c66217eb7117c07c8388cfccc8acf8",
+      "id": "DnEU",
+      "code_hash": "05d4e57162f82bdd08e4631ea8079d6c",
       "outputs": [
         {
           "type": "data",
@@ -267,167 +300,15 @@
       "console": [
         {
           "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:15:00 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:15:04 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
           "name": "stdout",
-          "text": "Epoch 1/10, Loss = 1.3310751468324296\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:15:21 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:15:25 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 2/10, Loss = 0.8671474511666066\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:15:39 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:15:43 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 3/10, Loss = 0.6775563941587268\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:15:56 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:16:00 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 4/10, Loss = 0.5331116083180508\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:16:14 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:16:18 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 5/10, Loss = 0.40929655467762666\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:16:32 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:16:36 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 6/10, Loss = 0.30251058730322994\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:16:49 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:16:53 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 7/10, Loss = 0.21813227438255953\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:17:07 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:17:10 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 8/10, Loss = 0.16255163953013127\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:17:23 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:17:27 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 9/10, Loss = 0.14233386581358703\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:17:41 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:17:45 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 10/10, Loss = 0.11364117943588882\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:17:58 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:18:02 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Test Accuracy: 75.05%\n",
+          "text": "Epoch 1/10, Loss = 1.3974782518108788\nEpoch 2/10, Loss = 0.9278644193773684\nEpoch 3/10, Loss = 0.7152334691770851\nEpoch 4/10, Loss = 0.5709185130760798\nEpoch 5/10, Loss = 0.4526398703265373\nEpoch 6/10, Loss = 0.3433163534954686\nEpoch 7/10, Loss = 0.24998186305736947\nEpoch 8/10, Loss = 0.19040030144783845\nEpoch 9/10, Loss = 0.1632516263886486\nEpoch 10/10, Loss = 0.13043279217941986\nTest Accuracy: 74.75%\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "Vxnm",
-      "code_hash": "17d2fa2e00d9ef3daed6fde8e0501455",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "DnEU",
-      "code_hash": "2bd823a3c7b374e268041d27458a5f36",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">We instantiate one more lightweight network model to compare their performances. Back propagation is sensitive to weight initialization, so we need to make sure these two networks have the exact same initialization.</span></span>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
       "id": "ulZA",
-      "code_hash": "4c22bf4012fec5ad85d80b2662b0ae6c",
+      "code_hash": "f3a23f666452b0931545eda2d0db6366",
       "outputs": [
         {
           "type": "data",
@@ -440,6 +321,32 @@
     },
     {
       "id": "ecfG",
+      "code_hash": "2bd823a3c7b374e268041d27458a5f36",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "We instantiate one more lightweight network model to compare their performances. Back propagation is sensitive to weight initialization, so we need to make sure these two networks have the exact same initialization."
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Pvdt",
+      "code_hash": "7b132d6479e431b62813b8f9305e8027",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZBYS",
       "code_hash": "8bdce678480b12f2a13bbb8354d2b26e",
       "outputs": [
         {
@@ -453,26 +360,26 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Norm of 1st layer of nn_light: 2.327361822128296\nNorm of 1st layer of new_nn_light: 2.327361822128296\n",
+          "text": "Norm of 1st layer of nn_light: 2.2852489948272705\nNorm of 1st layer of new_nn_light: 2.337944746017456\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "Pvdt",
+      "id": "aLJB",
       "code_hash": "b219ba4755eaf201bfe8641949f16e45",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Print the total number of parameters in each model:</span></span>"
+            "text/markdown": "Print the total number of parameters in each model:"
           }
         }
       ],
       "console": []
     },
     {
-      "id": "ZBYS",
+      "id": "nHfw",
       "code_hash": "cff41e2b0af2fcabceb842b2f86093f7",
       "outputs": [
         {
@@ -492,21 +399,21 @@
       ]
     },
     {
-      "id": "aLJB",
+      "id": "xXTn",
       "code_hash": "99847b25f26f6083339d5f2e088a60a9",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Train and test the lightweight network with cross entropy loss:</span></span>"
+            "text/markdown": "Train and test the lightweight network with cross entropy loss:"
           }
         }
       ],
       "console": []
     },
     {
-      "id": "nHfw",
-      "code_hash": "6a14f47b35e2a460d64c2a6f4d4da5d4",
+      "id": "AjVT",
+      "code_hash": "d43c4a3056f2dab2446dc4e8de23b361",
       "outputs": [
         {
           "type": "data",
@@ -518,140 +425,14 @@
       "console": [
         {
           "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:24:53 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:24:57 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
           "name": "stdout",
-          "text": "Epoch 1/10, Loss = 0.23181783878589834\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:25:06 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:25:10 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 2/10, Loss = 0.19912338838019333\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:25:19 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:25:23 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 3/10, Loss = 0.19081497156177946\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:25:33 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:25:37 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 4/10, Loss = 0.17566133112363194\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:25:47 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:25:51 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 5/10, Loss = 0.1721320446876004\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:26:01 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:26:05 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 6/10, Loss = 0.16255827245238186\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:26:15 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:26:19 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 7/10, Loss = 0.14585462908077118\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:26:29 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:26:33 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 8/10, Loss = 0.14287284126176553\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:26:43 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:26:47 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 9/10, Loss = 0.14401988774690483\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:26:57 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:27:01 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 10/10, Loss = 0.13524492152625947\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:27:10 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:27:13 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Test Accuracy: 68.75%\n",
+          "text": "Epoch 1/10, Loss = 1.4699582742608113\nEpoch 2/10, Loss = 1.147582862840589\nEpoch 3/10, Loss = 1.000320653019049\nEpoch 4/10, Loss = 0.9039682962400529\nEpoch 5/10, Loss = 0.8231865765188661\nEpoch 6/10, Loss = 0.7540609155164655\nEpoch 7/10, Loss = 0.6953719047176868\nEpoch 8/10, Loss = 0.6393959798928722\nEpoch 9/10, Loss = 0.5909901214834979\nEpoch 10/10, Loss = 0.5399060561833784\nTest Accuracy: 71.12%\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "xXTn",
+      "id": "pHFh",
       "code_hash": "1fdc5051e4ffbc5c1b07c33451627c9a",
       "outputs": [
         {
@@ -665,53 +446,53 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Teacher accuracy: 75.05%\nStudent accuracy: 68.75%\n",
+          "text": "Teacher accuracy: 74.75%\nStudent accuracy: 71.12%\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "arzB",
+      "id": "NCOB",
       "code_hash": "7bbef70a2aab5257ebb6dfd1be3077e3",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"knowledge-distillation\">Knowledge distillation</h2>\n<span class=\"paragraph\">Now let\u2019s try to improve the test accuracy of the student network by incorporating the teacher. Knowledge distillation is a straightforward technique to achieve this, based on the fact that both networks output a probability distribution over our classes. Therefore, the two networks share the same number of output neurons. The method works by incorporating an additional loss into the traditional cross entropy loss, which is based on the softmax output of the teacher network. <strong>The assumption is that the output activations of a properly trained teacher network carry additional information that can be leveraged by a student network during training</strong>. The original work suggests that utilizing ratios of smaller probabilities in the soft targets can help achieve the underlying objective of deep neural networks, which is to create a similarity structure over the data where similar objects are mapped closer together.</span></span>"
+            "text/markdown": "## Knowledge distillation\n\nNow let\u2019s try to improve the test accuracy of the student network by incorporating the teacher. Knowledge distillation is a straightforward technique to achieve this, based on the fact that both networks output a probability distribution over our classes. Therefore, the two networks share the same number of output neurons. The method works by incorporating an additional loss into the traditional cross entropy loss, which is based on the softmax output of the teacher network. **The assumption is that the output activations of a properly trained teacher network carry additional information that can be leveraged by a student network during training**. The original work suggests that utilizing ratios of smaller probabilities in the soft targets can help achieve the underlying objective of deep neural networks, which is to create a similarity structure over the data where similar objects are mapped closer together."
           }
         }
       ],
       "console": []
     },
     {
-      "id": "Enot",
+      "id": "aqbW",
       "code_hash": "2d181a089f034ca8c3b33f8fca1ab5cb",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">For example, in CIFAR-10, a truck could be mistaken for an automobile or airplane, if its wheels are present, but it is less likely to be mistaken for a dog. Therefore, it makes sense to assume that valuable information resides not only in the top prediction of a properly trained model but in the entire output distribution. However, cross entropy alone does not sufficiently exploit this information as the activations for non-predicted classes tend to be so small that propagated gradients do not meaningfully change the weights to construct this desirable vector space.</span></span>"
+            "text/markdown": "For example, in CIFAR-10, a truck could be mistaken for an automobile or airplane, if its wheels are present, but it is less likely to be mistaken for a dog. Therefore, it makes sense to assume that valuable information resides not only in the top prediction of a properly trained model but in the entire output distribution. However, cross entropy alone does not sufficiently exploit this information as the activations for non-predicted classes tend to be so small that propagated gradients do not meaningfully change the weights to construct this desirable vector space."
           }
         }
       ],
       "console": []
     },
     {
-      "id": "ysYA",
+      "id": "TRpd",
       "code_hash": "505afc56aee80cd602c3a3eb3ebdb4f5",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">As we continue defining our first helper function that introduces a teacher-student dynamic, we need to include a few extra parameters:</span>\n<ul>\n<li><code>T</code>: Temperature that controls the smoothness of the output distributions.</li>\n<li><code>soft_target_loss_weight</code>: A weight assigned to the extra objective we're about to include.</li>\n<li><code>ce_loss_weight</code>: A weight assigned to cross-entropy. Tuning these weights pushes the network towards optimizing for either objective.</li>\n</ul></span>"
+            "text/markdown": "As we continue defining our first helper function that introduces a teacher-student dynamic, we need to include a few extra parameters:\n- `T`: Temperature that controls the smoothness of the output distributions.\n- `soft_target_loss_weight`: A weight assigned to the extra objective we're about to include.\n- `ce_loss_weight`: A weight assigned to cross-entropy. Tuning these weights pushes the network towards optimizing for either objective."
           }
         }
       ],
       "console": []
     },
     {
-      "id": "KwCb",
-      "code_hash": "16ebc5b8d24604dc24552fb8721505ca",
+      "id": "TXez",
+      "code_hash": "3821a26cd84275cd103d40e45e8b9d4a",
       "outputs": [
         {
           "type": "data",
@@ -723,7 +504,7 @@
       "console": []
     },
     {
-      "id": "WqrR",
+      "id": "dNNg",
       "code_hash": "82b0e2d646df804855cc41c374f4574e",
       "outputs": [
         {
@@ -736,7 +517,7 @@
       "console": []
     },
     {
-      "id": "HVWf",
+      "id": "yCnT",
       "code_hash": "1347d2be51d9a274bff20b4118c52a33",
       "outputs": [
         {
@@ -749,192 +530,66 @@
       "console": [
         {
           "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:29:43 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:29:47 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
           "name": "stdout",
-          "text": "Epoch 1/10, Loss: 0.8514687356436649\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:29:57 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:30:01 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 2/10, Loss: 0.7806517878151915\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:30:11 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:30:14 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 3/10, Loss: 0.7134431638681066\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:30:24 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:30:28 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 4/10, Loss: 0.6640363715951095\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:30:38 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:30:42 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 5/10, Loss: 0.6217920067517654\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:30:52 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:30:56 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 6/10, Loss: 0.585571328087536\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:31:06 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:31:10 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 7/10, Loss: 0.5401659854842574\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:31:20 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:31:24 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 8/10, Loss: 0.5104188034144204\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:31:34 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:31:38 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 9/10, Loss: 0.4751162026696803\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:31:48 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:31:52 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 10/10, Loss: 0.4461674663569311\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 19:32:02 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 19:32:05 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Test Accuracy: 71.45%\nTeacher accuracy: 75.05%\nStudent accuracy without teacher: 68.75%\nStudent accuracy with CE + KD: 71.45%\n",
+          "text": "Epoch 1/10, Loss: 2.426335568623165\nEpoch 2/10, Loss: 1.8506279753906953\nEpoch 3/10, Loss: 1.598138683592267\nEpoch 4/10, Loss: 1.4386574447612324\nEpoch 5/10, Loss: 1.3191257992668834\nEpoch 6/10, Loss: 1.2159982303829144\nEpoch 7/10, Loss: 1.1227675360791824\nEpoch 8/10, Loss: 1.0356456856898335\nEpoch 9/10, Loss: 0.9564500638591055\nEpoch 10/10, Loss: 0.8875487555018471\nTest Accuracy: 71.17%\nTeacher accuracy: 74.75%\nStudent accuracy without teacher: 71.12%\nStudent accuracy with CE + KD: 71.17%\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "FEds",
+      "id": "wlCL",
       "code_hash": "8d98d457482cf9647dbd43bfadf7e2cf",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"cosine-loss-minimization-run\">Cosine loss minimization run</h2>\n<span class=\"paragraph\">Feel free to play around with the temperature parameter that controls the softness of the softmax function and the loss coefficients. In neural networks, it is easy to include additional loss functions to the main objectives to achieve goals like better generalization. Let\u2019s try including an objective for the student, but now let\u2019s focus on their hidden states rather than their output layers. Our goal is to convey information from the teacher\u2019s representation to the student by including a naive loss function, whose minimization implies that the flattened vectors that are subsequently passed to the classifiers have become more similar as the loss decreases. Of course, the teacher does not update its weights, so the minimization depends only on the student\u2019s weights. The rationale behind this method is that we are operating under the assumption that the teacher model has a better internal representation that is unlikely to be achieved by the student without external intervention, therefore we artificially push the student to mimic the internal representation of the teacher. Whether or not this will end up helping the student is not straightforward, though, because pushing the lightweight network to reach this point could be a good thing, assuming that we have found an internal representation that leads to better test accuracy, but it could also be harmful because the networks have different architectures and the student does not have the same learning capacity as the teacher. In other words, there is no reason for these two vectors, the student\u2019s and the teacher\u2019s to match per component. The student could reach an internal representation that is a permutation of the teacher\u2019s and it would be just as efficient. Nonetheless, we can still run a quick experiment to figure out the impact of this method. We will be using the CosineEmbeddingLoss which is given by the following formula:</span></span>"
+            "text/markdown": "## Cosine loss minimization run\n\nFeel free to play around with the temperature parameter that controls the softness of the softmax function and the loss coefficients. In neural networks, it is easy to include additional loss functions to the main objectives to achieve goals like better generalization. Let\u2019s try including an objective for the student, but now let\u2019s focus on their hidden states rather than their output layers. Our goal is to convey information from the teacher\u2019s representation to the student by including a naive loss function, whose minimization implies that the flattened vectors that are subsequently passed to the classifiers have become more similar as the loss decreases. Of course, the teacher does not update its weights, so the minimization depends only on the student\u2019s weights. The rationale behind this method is that we are operating under the assumption that the teacher model has a better internal representation that is unlikely to be achieved by the student without external intervention, therefore we artificially push the student to mimic the internal representation of the teacher. Whether or not this will end up helping the student is not straightforward, though, because pushing the lightweight network to reach this point could be a good thing, assuming that we have found an internal representation that leads to better test accuracy, but it could also be harmful because the networks have different architectures and the student does not have the same learning capacity as the teacher. In other words, there is no reason for these two vectors, the student\u2019s and the teacher\u2019s to match per component. The student could reach an internal representation that is a permutation of the teacher\u2019s and it would be just as efficient. Nonetheless, we can still run a quick experiment to figure out the impact of this method. We will be using the CosineEmbeddingLoss which is given by the following formula:"
           }
         }
       ],
       "console": []
     },
     {
-      "id": "qTVr",
+      "id": "kqZH",
       "code_hash": "837851b1cc7a086a36dc0cf695223c8d",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><marimo-tex class=\"arithmatex\">||[\nloss(x, y) = \\left\\{ \\begin{array}{cl}\n1 - cos(x_1, x_2), &amp; \\text{if } y = 1 \\\\\nmax(0, cos(x_1, x_2) - \\text{margin}), &amp; \\text{if } y = -1 \\\\\n\\end{array} \\right.\n||]</marimo-tex></span>"
+            "text/markdown": "$$\nloss(x, y) = \\left\\{ \\begin{array}{cl}\n1 - cos(x_1, x_2), & \\text{if } y = 1 \\\\\nmax(0, cos(x_1, x_2) - \\text{margin}), & \\text{if } y = -1 \\\\\n\\end{array} \\right.\n$$"
           }
         }
       ],
       "console": []
     },
     {
-      "id": "NGWn",
+      "id": "wAgl",
       "code_hash": "18cf71a7dab7395049dbf771fbcfdf85",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Obviously, there is one thing that we need to resolve first. When we applied distillation to the output layer we mentioned that both networks have the same number of neurons, equal to the number of classes. However, this is not the case for the layer following our convolutional layers. Here, the teacher has more neurons than the student after the flattening of the final convolutional layer. Our loss function accepts two vectors of equal dimensionality as inputs, therefore we need to somehow match them. We will solve this by including an average pooling layer after the teacher\u2019s convolutional layer to reduce its dimensionality to match that of the student.</span></span>"
+            "text/markdown": "Obviously, there is one thing that we need to resolve first. When we applied distillation to the output layer we mentioned that both networks have the same number of neurons, equal to the number of classes. However, this is not the case for the layer following our convolutional layers. Here, the teacher has more neurons than the student after the flattening of the final convolutional layer. Our loss function accepts two vectors of equal dimensionality as inputs, therefore we need to somehow match them. We will solve this by including an average pooling layer after the teacher\u2019s convolutional layer to reduce its dimensionality to match that of the student."
           }
         }
       ],
       "console": []
     },
     {
-      "id": "FHdd",
+      "id": "rEll",
       "code_hash": "0098e8db07f38dab1f971a9887e46c96",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">To proceed, we will modify our model classes, or create new ones. Now, the forward function returns not only the logits of the network but also the flattened hidden representation after the convolutional layer. We include the aforementioned pooling for the modified teacher.</span></span>"
+            "text/markdown": "To proceed, we will modify our model classes, or create new ones. Now, the forward function returns not only the logits of the network but also the flattened hidden representation after the convolutional layer. We include the aforementioned pooling for the modified teacher."
           }
         }
       ],
       "console": []
     },
     {
-      "id": "PVtC",
+      "id": "dGlV",
       "code_hash": "7d159accfcc071bb2249ad7a82ef2a35",
       "outputs": [
         {
@@ -947,7 +602,7 @@
       "console": []
     },
     {
-      "id": "wLxI",
+      "id": "SdmI",
       "code_hash": "1f8695078374ee85e391f33ea810c72b",
       "outputs": [
         {
@@ -960,8 +615,8 @@
       "console": []
     },
     {
-      "id": "FFiC",
-      "code_hash": "7d9119d9fb23489f3386cd0075f046e8",
+      "id": "lgWD",
+      "code_hash": "10fd60dd81abb4076a5af2697ca1d1aa",
       "outputs": [
         {
           "type": "data",
@@ -974,14 +629,14 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Norm of 1st layer for deep_nn: 7.4813947677612305\nNorm of 1st layer for modified_deep_nn: 7.4813947677612305\n",
+          "text": "Norm of 1st layer for deep_nn: 7.526254653930664\nNorm of 1st layer for modified_deep_nn: 7.526254653930664\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "YumT",
-      "code_hash": "6c68f5fc409ea6d2b0437bfa50cdbb77",
+      "id": "yOPj",
+      "code_hash": "346341fdadb6b784b18b7725f010c485",
       "outputs": [
         {
           "type": "data",
@@ -994,26 +649,26 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Norm of 1st layer: 2.327361822128296\n",
+          "text": "Norm of 1st layer: 2.2852489948272705\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "SRgU",
+      "id": "fwwy",
       "code_hash": "07fdbc56fa33760ea21660f201fa45e7",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Naturally, we need to change the train loop because now the model returns a tuple <code>(logits, hidden_representation)</code>. Using a sample input tensor we can print their shapes.</span></span>"
+            "text/markdown": "Naturally, we need to change the train loop because now the model returns a tuple `(logits, hidden_representation)`. Using a sample input tensor we can print their shapes."
           }
         }
       ],
       "console": []
     },
     {
-      "id": "lFdW",
+      "id": "LJZf",
       "code_hash": "43c9c1a58c654fc6434efca66089f13c",
       "outputs": [
         {
@@ -1033,21 +688,21 @@
       ]
     },
     {
-      "id": "drRU",
+      "id": "urSm",
       "code_hash": "b39a88df68ede664691506b9f913c3dd",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">In our case, hidden_representation_size is 1024. This is the flattened feature map of the final convolutional layer of the student and as you can see, it is the input for its classifier. It is 1024 for the teacher too, because we made it so with avg_pool1d from 2048. The loss applied here only affects the weights of the student prior to the loss calculation. In other words, it does not affect the classifier of the student.</span></span>"
+            "text/markdown": "In our case, hidden_representation_size is 1024. This is the flattened feature map of the final convolutional layer of the student and as you can see, it is the input for its classifier. It is 1024 for the teacher too, because we made it so with avg_pool1d from 2048. The loss applied here only affects the weights of the student prior to the loss calculation. In other words, it does not affect the classifier of the student."
           }
         }
       ],
       "console": []
     },
     {
-      "id": "tXvJ",
-      "code_hash": "1b1a45f0de8cba74971b19d2ff643671",
+      "id": "jxvo",
+      "code_hash": "d23d33283e59ad7d5eaf255a60e97f77",
       "outputs": [
         {
           "type": "data",
@@ -1059,7 +714,7 @@
       "console": []
     },
     {
-      "id": "oHFh",
+      "id": "mWxS",
       "code_hash": "25530218458b92dc85bcdf143316cf91",
       "outputs": [
         {
@@ -1072,7 +727,7 @@
       "console": []
     },
     {
-      "id": "iRsY",
+      "id": "CcZR",
       "code_hash": "7370941ba062ae09d0f65a7eea42c50b",
       "outputs": [
         {
@@ -1086,14 +741,14 @@
         {
           "type": "stream",
           "name": "stderr",
-          "text": "\u001b[33m[W 260706 20:40:21 compiler:352]\u001b(B\u001b[m pytest is not installed, skipping assertion rewriting\n",
+          "text": "\u001b[33m[W 260707 14:14:16 compiler:352]\u001b(B\u001b[m pytest is not installed, skipping assertion rewriting\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
-      "id": "NHsh",
-      "code_hash": "76f20d0f07ce342adb742589aa72300e",
+      "id": "YWSi",
+      "code_hash": "d6979e2da64f078fdae8a5becc938d29",
       "outputs": [
         {
           "type": "data",
@@ -1105,134 +760,185 @@
       "console": [
         {
           "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 20:40:33 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:40:33 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:40:37 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:40:37 compiler:352] pytest is not installed, skipping assertion rewriting\n",
+          "name": "stdout",
+          "text": "Epoch 1/10, Loss: 1.301514346886169\nEpoch 2/10, Loss: 1.0561232839703865\nEpoch 3/10, Loss: 0.9531420345806405\nEpoch 4/10, Loss: 0.8764619877576219\nEpoch 5/10, Loss: 0.8264229427213254\nEpoch 6/10, Loss: 0.778819742867404\nEpoch 7/10, Loss: 0.7407438739791246\nEpoch 8/10, Loss: 0.7084508797396785\nEpoch 9/10, Loss: 0.6773196429090427\nEpoch 10/10, Loss: 0.6487434914959666\nTest accuracy: 71.46%\n",
           "mimetype": "text/plain"
-        },
+        }
+      ]
+    },
+    {
+      "id": "zlud",
+      "code_hash": "07f38a132933706726e02b3e7448bd46",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "## Intermediate regressor run\n\nOur naive minimization does not guarantee better results for several reasons, one being the dimensionality of the vectors. Cosine similarity generally works better than Euclidean distance for vectors of higher dimensionality, but we were dealing with vectors with 1024 components each, so it is much harder to extract meaningful similarities. Furthermore, as we mentioned, pushing towards a match of the hidden representation of the teacher and the student is not supported by theory. There are no good reasons why we should be aiming for a 1:1 match of these vectors."
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "tZnO",
+      "code_hash": "7921492dad84e194bc4afafbcb70fd37",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "We will provide a final example of training intervention by including an extra network called regressor. The objective is to first extract the feature map of the teacher after a convolutional layer, then extract a feature map of the student after a convolutional layer, and finally try to match these maps. However, this time, we will introduce a regressor between the networks to facilitate the matching process. The regressor will be trainable and ideally will do a better job than our naive cosine loss minimization scheme. Its main job is to match the dimensionality of these feature maps so that we can properly define a loss function between the teacher and the student. Defining such a loss function provides a teaching \u201cpath,\u201d which is basically a flow to back-propagate gradients that will change the student\u2019s weights. Focusing on the output of the convolutional layers right before each classifier for our original networks, we have the following shapes:"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "xvXZ",
+      "code_hash": "f36bc1e6860f16b741561ccb8e20318b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Epoch 1/10, Loss: 0.6283089770837818\n",
+          "text": "Student's feature extractor output shape:  torch.Size([128, 16, 8, 8])\nTeacher's feature extractor output shape:  torch.Size([128, 32, 8, 8])\n",
           "mimetype": "text/plain"
-        },
+        }
+      ]
+    },
+    {
+      "id": "CLip",
+      "code_hash": "d03b2c039a2926688fbf798337fd8291",
+      "outputs": [
         {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 20:40:48 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:40:48 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:40:52 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:40:52 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
+          "type": "data",
+          "data": {
+            "text/markdown": "We have 32 filters for the teacher and 16 filters for the student. We will include a trainable layer that converts the student's feature map to the shape of the teacher's feature map. In practice, we modify the lightweight class to return the hidden state after an immediate regressor that matches the size of the convolutional feature maps and the teacher class to return the output of the final convolutional layer without pooling or flattening."
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "YECM",
+      "code_hash": "15720faea21ca793d8a2144bc105e68d",
+      "outputs": [
         {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 2/10, Loss: 0.5947692027634672\n",
-          "mimetype": "text/plain"
-        },
+          "type": "data",
+          "data": {
+            "text/html": "<img src='https://docs.pytorch.org/tutorials/_static/img/knowledge_distillation/fitnets_knowledge_distill.png' />"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "cEAS",
+      "code_hash": "2e8df707b087e0ccc2e01d113dc33096",
+      "outputs": [
         {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 20:41:03 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:41:03 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:41:07 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:41:07 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iXej",
+      "code_hash": "dc80f1ac57e27350b90a57cb230fe11e",
+      "outputs": [
         {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 3/10, Loss: 0.5722367992943815\n",
-          "mimetype": "text/plain"
-        },
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "EJmg",
+      "code_hash": "c1c7b28cdb5b3f87e8ca4b86fe8aeea9",
+      "outputs": [
         {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 20:41:17 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:41:17 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:41:21 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:41:21 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
+          "type": "data",
+          "data": {
+            "text/markdown": "After that, we have to update our train loop again. This time, we extract the regressor output of the student, the feature map of the teacher, we calculate the `MSE` on these tensors (they have the exact same shape so it\u2019s properly defined) and we back propagate gradients based on that loss, in addition to the regular cross entropy loss of the classification task."
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "UmEG",
+      "code_hash": "e01904a74102beadbcaae1fed528e8cd",
+      "outputs": [
         {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 4/10, Loss: 0.5468767156533878\n",
-          "mimetype": "text/plain"
-        },
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vEBW",
+      "code_hash": "895f91e368d2be81613a328c01b36326",
+      "outputs": [
         {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 20:41:32 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:41:32 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:41:36 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:41:36 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 5/10, Loss: 0.5235518628678968\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 20:41:47 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:41:47 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:41:51 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:41:51 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 6/10, Loss: 0.49913328794567174\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 20:42:02 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:42:02 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:42:06 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:42:06 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 7/10, Loss: 0.4813559141457843\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 20:42:17 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:42:18 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:42:21 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:42:21 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 8/10, Loss: 0.46007861094096736\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 20:42:32 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:42:32 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:42:36 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:42:36 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "Epoch 9/10, Loss: 0.44204696197339033\n",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 20:42:47 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:42:47 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:42:51 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:42:51 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Epoch 10/10, Loss: 0.4268604177038383\n",
+          "text": "Epoch 1/10, Loss: 1.3354538741623958\nEpoch 2/10, Loss: 0.7247414701734968\nEpoch 3/10, Loss: 0.5629884589206228\nEpoch 4/10, Loss: 0.45107074764073657\nEpoch 5/10, Loss: 0.36283701536295665\nEpoch 6/10, Loss: 0.29451709158737643\nEpoch 7/10, Loss: 0.2357697762796641\nEpoch 8/10, Loss: 0.20208236931458765\nEpoch 9/10, Loss: 0.1809339991882634\nEpoch 10/10, Loss: 0.16156046605094923\nTest accuracy: 73.95%\n",
           "mimetype": "text/plain"
-        },
+        }
+      ]
+    },
+    {
+      "id": "kLmu",
+      "code_hash": "c5538e44b89fd1471ef0196e87261a20",
+      "outputs": [
         {
-          "type": "stream",
-          "name": "stderr",
-          "text": "[W 260706 20:43:01 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:43:01 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:43:04 compiler:352] pytest is not installed, skipping assertion rewriting\n[W 260706 20:43:05 compiler:352] pytest is not installed, skipping assertion rewriting\n",
-          "mimetype": "text/plain"
-        },
+          "type": "data",
+          "data": {
+            "text/markdown": "It is expected that the final method will work better than `CosineLoss` because now we have allowed a trainable layer between the teacher and the student, which gives the student some wiggle room when it comes to learning, rather than pushing the student to copy the teacher\u2019s representation. Including the extra network is the idea behind hint-based distillation."
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "IpqN",
+      "code_hash": "e4020d6eded8fb945a177c55808d04d6",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Test accuracy: 71.05%\n",
+          "text": "Teacher accuracy: 74.75%\nStudent accuracy without teacher: 71.12%\nStudent accuracy with CE + KD: 71.17%\nStudent accuracy with CE + CosineLoss: 71.46%\nStudent accuracy with CE + RegressorMSE: 73.95%\n",
           "mimetype": "text/plain"
         }
       ]

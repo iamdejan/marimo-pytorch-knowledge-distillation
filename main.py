@@ -46,6 +46,31 @@ def _():
     return datasets, device, nn, optim, torch, transforms
 
 
+@app.cell
+def _(torch):
+    import numpy as np
+    import random
+    import os
+
+    def set_seed(seed: int = 42):
+        random.seed(seed)
+        np.random.seed(seed)
+        os.environ["PYTHONHASHSEED"] = str(seed)
+        torch.manual_seed(seed)
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)  # For multi-GPU
+
+        # Configure CUDA backends
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+
+        # Force use of deterministic algorithms (PyTorch 1.7+)
+        torch.use_deterministic_algorithms(True)
+
+    set_seed(42)
+    return (set_seed,)
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
@@ -102,14 +127,48 @@ def _(mo):
 
 
 @app.cell
+def _():
+    utils_code = """import random
+    import numpy as np
+    import torch
+
+    def seed_worker(worker_id):
+        worker_seed = torch.initial_seed() % (2**32)
+        np.random.seed(worker_seed)
+        random.seed(worker_seed)
+    """
+
+    with open("utils.py", "w") as f:
+        f.write(utils_code)
+
+    print("Successfully wrote utils.py!")
+    return
+
+
+@app.cell
 def _(test_dataset, torch, train_dataset):
+    from utils import seed_worker
+
+    g = torch.Generator()
+    g.manual_seed(42)
+
     train_loader = torch.utils.data.DataLoader(
-        train_dataset, batch_size=128, shuffle=True, num_workers=2
+        train_dataset,
+        batch_size=128,
+        shuffle=True,
+        num_workers=0,
+        worker_init_fn=seed_worker,
+        generator=g,
     )
     test_loader = torch.utils.data.DataLoader(
-        test_dataset, batch_size=128, shuffle=False, num_workers=2
+        test_dataset,
+        batch_size=128,
+        shuffle=False,
+        num_workers=0,
+        worker_init_fn=seed_worker,
+        generator=g,
     )
-    return test_loader, train_loader
+    return g, test_loader, train_loader
 
 
 @app.cell(hide_code=True)
@@ -250,8 +309,10 @@ def _(mo):
 
 
 @app.cell
-def _(DeepNN, device, test, test_loader, torch, train, train_loader):
-    torch.manual_seed(42)
+def _(DeepNN, device, g, set_seed, test, test_loader, train, train_loader):
+    set_seed(42)
+    g.manual_seed(42)
+
     nn_deep = DeepNN(num_classes=10).to(device)
     train(nn_deep, train_loader, epochs=10, learning_rate=0.001, device=device)
     test_accuracy_deep = test(nn_deep, test_loader, device)
@@ -259,8 +320,7 @@ def _(DeepNN, device, test, test_loader, torch, train, train_loader):
 
 
 @app.cell
-def _(LightNN, device, torch):
-    torch.manual_seed(42)
+def _(LightNN, device):
     nn_light = LightNN(num_classes=10).to(device)
     return (nn_light,)
 
@@ -274,8 +334,7 @@ def _(mo):
 
 
 @app.cell
-def _(LightNN, device, torch):
-    torch.manual_seed(42)
+def _(LightNN, device):
     new_nn_light = LightNN(num_classes=10).to(device)
     return (new_nn_light,)
 
@@ -314,7 +373,8 @@ def _(mo):
 
 
 @app.cell
-def _(device, nn_light, test, test_loader, train, train_loader):
+def _(device, nn_light, set_seed, test, test_loader, train, train_loader):
+    set_seed(42)  # Reset seed for identical initialization
     train(nn_light, train_loader, epochs=10, learning_rate=0.001, device=device)
     test_accuracy_light_ce = test(nn_light, test_loader, device)
     return (test_accuracy_light_ce,)
@@ -454,7 +514,7 @@ def _(
     print(f"Teacher accuracy: {test_accuracy_deep:.2f}%")
     print(f"Student accuracy without teacher: {test_accuracy_light_ce:.2f}%")
     print(f"Student accuracy with CE + KD: {test_accuracy_light_ce_and_kd:.2f}%")
-    return
+    return (test_accuracy_light_ce_and_kd,)
 
 
 @app.cell(hide_code=True)
@@ -557,7 +617,6 @@ def _(nn, torch):
 
 @app.cell
 def _(ModifiedDeepNNCosine, device, nn_deep, torch):
-    torch.manual_seed(42)
     modified_nn_deep = ModifiedDeepNNCosine(num_classes=10).to(device)
     modified_nn_deep.load_state_dict(nn_deep.state_dict(), strict=True)
 
@@ -572,7 +631,6 @@ def _(ModifiedDeepNNCosine, device, nn_deep, torch):
 
 @app.cell
 def _(ModifiedLightNNCosine, device, torch):
-    torch.manual_seed(42)
     modified_nn_light = ModifiedLightNNCosine(num_classes=10).to(device)
     print("Norm of 1st layer:", torch.norm(modified_nn_light.features[0].weight).item())
     return (modified_nn_light,)
@@ -603,7 +661,7 @@ def _(device, modified_nn_deep, modified_nn_light, torch):
     # Print the shapes of the tensors
     print(f"Teacher logits shape: {logits.shape}")
     print(f"Teacher hidden representation shape: {hidden_representation.shape}")
-    return
+    return (sample_input,)
 
 
 @app.cell(hide_code=True)
@@ -713,11 +771,13 @@ def _(
     device,
     modified_nn_deep,
     modified_nn_light,
+    set_seed,
     test_loader,
     test_multiple_outputs,
     train_cosine_loss,
     train_loader,
 ):
+    set_seed(42)  # Reset seed for identical initialization
     train_cosine_loss(
         teacher=modified_nn_deep,
         student=modified_nn_light,
@@ -731,6 +791,235 @@ def _(
     test_accuracy_light_ce_and_cosine_loss = test_multiple_outputs(
         modified_nn_light, test_loader, device
     )
+    return (test_accuracy_light_ce_and_cosine_loss,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ## Intermediate regressor run
+
+    Our naive minimization does not guarantee better results for several reasons, one being the dimensionality of the vectors. Cosine similarity generally works better than Euclidean distance for vectors of higher dimensionality, but we were dealing with vectors with 1024 components each, so it is much harder to extract meaningful similarities. Furthermore, as we mentioned, pushing towards a match of the hidden representation of the teacher and the student is not supported by theory. There are no good reasons why we should be aiming for a 1:1 match of these vectors.
+    """)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    We will provide a final example of training intervention by including an extra network called regressor. The objective is to first extract the feature map of the teacher after a convolutional layer, then extract a feature map of the student after a convolutional layer, and finally try to match these maps. However, this time, we will introduce a regressor between the networks to facilitate the matching process. The regressor will be trainable and ideally will do a better job than our naive cosine loss minimization scheme. Its main job is to match the dimensionality of these feature maps so that we can properly define a loss function between the teacher and the student. Defining such a loss function provides a teaching “path,” which is basically a flow to back-propagate gradients that will change the student’s weights. Focusing on the output of the convolutional layers right before each classifier for our original networks, we have the following shapes:
+    """)
+    return
+
+
+@app.cell
+def _(nn_deep, nn_light, sample_input):
+    convolutional_fe_output_teacher = nn_deep.features(sample_input)
+    convolutional_fe_output_student = nn_light.features(sample_input)
+
+    # Print their shapes
+    print("Student's feature extractor output shape: ", convolutional_fe_output_student.shape)
+    print("Teacher's feature extractor output shape: ", convolutional_fe_output_teacher.shape)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    We have 32 filters for the teacher and 16 filters for the student. We will include a trainable layer that converts the student's feature map to the shape of the teacher's feature map. In practice, we modify the lightweight class to return the hidden state after an immediate regressor that matches the size of the convolutional feature maps and the teacher class to return the output of the final convolutional layer without pooling or flattening.
+    """)
+    return
+
+
+@app.cell
+def _(mo):
+    mo.image(
+        src="https://docs.pytorch.org/tutorials/_static/img/knowledge_distillation/fitnets_knowledge_distill.png"
+    )
+    return
+
+
+@app.cell
+def _(nn, torch):
+    class ModifiedDeepNNRegressor(nn.Module):
+        def __init__(self, num_classes=10):
+            super(ModifiedDeepNNRegressor, self).__init__()
+            self.features = nn.Sequential(
+                nn.Conv2d(3, 128, kernel_size=3, padding=1),
+                nn.ReLU(),
+                nn.Conv2d(128, 64, kernel_size=3, padding=1),
+                nn.ReLU(),
+                nn.MaxPool2d(kernel_size=2, stride=2),
+                nn.Conv2d(64, 64, kernel_size=3, padding=1),
+                nn.ReLU(),
+                nn.Conv2d(64, 32, kernel_size=3, padding=1),
+                nn.ReLU(),
+                nn.MaxPool2d(kernel_size=2, stride=2),
+            )
+            self.classifier = nn.Sequential(
+                nn.Linear(2048, 512),
+                nn.ReLU(),
+                nn.Dropout(0.1),
+                nn.Linear(512, num_classes),
+            )
+
+        def forward(self, x):
+            x = self.features(x)
+            conv_feature_map = x
+            x = torch.flatten(x, 1)
+            x = self.classifier(x)
+            return x, conv_feature_map
+
+    return (ModifiedDeepNNRegressor,)
+
+
+@app.cell
+def _(nn, torch):
+    class ModifiedLightNNRegressor(nn.Module):
+        def __init__(self, num_classes=10):
+            super(ModifiedLightNNRegressor, self).__init__()
+            self.features = nn.Sequential(
+                nn.Conv2d(3, 16, kernel_size=3, padding=1),
+                nn.ReLU(),
+                nn.MaxPool2d(kernel_size=2, stride=2),
+                nn.Conv2d(16, 16, kernel_size=3, padding=1),
+                nn.ReLU(),
+                nn.MaxPool2d(kernel_size=2, padding=2),
+            )
+            # Include an extra regressor (in our case linear)
+            self.regressor = nn.Sequential(
+                nn.Conv2d(16, 32, kernel_size=3, padding=1),
+            )
+            self.classifier = nn.Sequential(
+                nn.Linear(1024, 256), nn.ReLU(), nn.Dropout(0.1), nn.Linear(256, num_classes)
+            )
+
+        def forward(self, x):
+            x = self.features(x)
+            regressor_output = self.regressor(x)
+            x = torch.flatten(x, 1)
+            x = self.classifier(x)
+            return x, regressor_output
+
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    After that, we have to update our train loop again. This time, we extract the regressor output of the student, the feature map of the teacher, we calculate the `MSE` on these tensors (they have the exact same shape so it’s properly defined) and we back propagate gradients based on that loss, in addition to the regular cross entropy loss of the classification task.
+    """)
+    return
+
+
+@app.cell
+def _(nn, optim, torch):
+    def train_mse_loss(
+        teacher,
+        student,
+        train_loader,
+        epochs,
+        learning_rate,
+        feature_map_weight,
+        ce_loss_weight,
+        device,
+    ):
+        cross_entropy_loss = nn.CrossEntropyLoss()
+        mean_squared_error_loss = nn.MSELoss()
+        optimizer = optim.Adam(student.parameters(), lr=learning_rate)
+
+        teacher.to(device)
+        student.to(device)
+        teacher.eval()  # Teacher set to evaluation mode
+        student.train()  # Student to train mode
+
+        for epoch in range(epochs):
+            running_loss = 0.0
+            for inputs, labels in train_loader:
+                inputs, labels = inputs.to(device), labels.to(device)
+
+                optimizer.zero_grad()
+
+                with torch.no_grad():
+                    _, teacher_feature_map = teacher(inputs)
+
+                student_logits, student_feature_map = student(inputs)
+
+                hidden_rep_loss = mean_squared_error_loss(student_feature_map, teacher_feature_map)
+
+                label_loss = cross_entropy_loss(student_logits, labels)
+
+                loss = feature_map_weight * hidden_rep_loss + ce_loss_weight * label_loss
+
+                loss.backward()
+                optimizer.step()
+
+                running_loss += loss.item()
+
+            print(f"Epoch {epoch + 1}/{epochs}, Loss: {running_loss / len(train_loader)}")
+
+    return (train_mse_loss,)
+
+
+@app.cell
+def _(
+    ModifiedDeepNNRegressor,
+    device,
+    nn_deep,
+    set_seed,
+    test_loader,
+    test_multiple_outputs,
+    train_loader,
+    train_mse_loss,
+):
+    modified_nn_light_reg = ModifiedDeepNNRegressor(num_classes=10).to(device)
+
+    # We do not have to train the modified deep network from scratch of course, we just load its weights from the trained instance
+    modified_nn_deep_reg = ModifiedDeepNNRegressor(num_classes=10).to(device)
+    modified_nn_deep_reg.load_state_dict(nn_deep.state_dict(), strict=True)
+
+    # Train and test once again
+    set_seed(42)  # Reset seed for identical initialization
+    train_mse_loss(
+        teacher=modified_nn_deep_reg,
+        student=modified_nn_light_reg,
+        train_loader=train_loader,
+        epochs=10,
+        learning_rate=0.001,
+        feature_map_weight=0.25,
+        ce_loss_weight=0.75,
+        device=device,
+    )
+
+    test_accuracy_light_ce_and_mse_loss = test_multiple_outputs(
+        modified_nn_light_reg,
+        test_loader,
+        device,
+    )
+    return (test_accuracy_light_ce_and_mse_loss,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    It is expected that the final method will work better than `CosineLoss` because now we have allowed a trainable layer between the teacher and the student, which gives the student some wiggle room when it comes to learning, rather than pushing the student to copy the teacher’s representation. Including the extra network is the idea behind hint-based distillation.
+    """)
+    return
+
+
+@app.cell
+def _(
+    test_accuracy_deep,
+    test_accuracy_light_ce,
+    test_accuracy_light_ce_and_cosine_loss,
+    test_accuracy_light_ce_and_kd,
+    test_accuracy_light_ce_and_mse_loss,
+):
+    print(f"Teacher accuracy: {test_accuracy_deep:.2f}%")
+    print(f"Student accuracy without teacher: {test_accuracy_light_ce:.2f}%")
+    print(f"Student accuracy with CE + KD: {test_accuracy_light_ce_and_kd:.2f}%")
+    print(f"Student accuracy with CE + CosineLoss: {test_accuracy_light_ce_and_cosine_loss:.2f}%")
+    print(f"Student accuracy with CE + RegressorMSE: {test_accuracy_light_ce_and_mse_loss:.2f}%")
     return
 
 

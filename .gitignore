@@ -1,4 +1,8 @@
+# Dataset
 /data
+
+# PDF output
+*.pdf
 
 # pixi environments
 .pixi/*

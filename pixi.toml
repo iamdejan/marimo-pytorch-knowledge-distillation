@@ -18,6 +18,7 @@ nbformat = ">=5.10.4,<6"
 ruff = ">=0.15.5,<0.16"
 pre-commit = ">=4.5.1,<5"
 ty = ">=0.0.56,<0.0.57"
+nbconvert = ">=7.17.1,<8"
 
 [target.default.dependencies]
 pytorch-gpu = ">=2.10"
@@ -29,3 +30,4 @@ torchvision = "*"
 
 [pypi-dependencies]
 mcp-pypi = ">=3.0.0, <4"
+playwright = ">=1.61.0, <2"
