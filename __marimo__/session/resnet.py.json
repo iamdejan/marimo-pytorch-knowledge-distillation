@@ -1,0 +1,290 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.23.13",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "eDeD",
+      "code_hash": "64f82c06d632b82c3929b3d875219e9d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"knowledge-distillation-resnet50-resnet18-on-cifar-10\">Knowledge Distillation: ResNet50 \u279e ResNet18 on CIFAR-10</h1></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "pusv",
+      "code_hash": "37089081a62aec093f90eecf67115ef3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"basic-setup\">Basic Setup</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "fnFa",
+      "code_hash": "d33f29545388c4febdb3eb114dcbaebd",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "PyTorch version: 2.12.1\nDevice used: cuda\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "JiMQ",
+      "code_hash": "3cd0238450c617655d4d015dacd6f557",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"load-dataset\">Load Dataset</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "NnbX",
+      "code_hash": "aa9eb8541ae409bc28d335a610967b3f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre class='text-xs'>Dataset CIFAR10\n    Number of datapoints: 50000\n    Root location: ./data\n    Split: Train\n    StandardTransform\nTransform: Compose(\n               ToTensor()\n               Normalize(mean=[0.4914, 0.4822, 0.4465], std=[0.2023, 0.1994, 0.201])\n           )</pre>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SDfA",
+      "code_hash": "a9be6a0bd96384a4f5385ca86364718a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Train samples: 45000\nValidation samples: 5000\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "sSft",
+      "code_hash": "abf7153aa7bcda0cbd87743e33c8c106",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "WtpZ",
+      "code_hash": "1839fe375144b01ac46962ed0466e23d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Test samples: 10000\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "vcIS",
+      "code_hash": "8f3d3b234ca49fe00c5e2568f90e8e71",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"setup-models\">Setup Models</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "YVtv",
+      "code_hash": "faa39a87263a4e969a540931c6ece6e8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "VJJJ",
+      "code_hash": "13731132c06deaa8ed79d83b7b3c3666",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MiBx",
+      "code_hash": "bb58f31192980b9b5efc62bd29f85a70",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Eyyp",
+      "code_hash": "d193ddbd76ae65c550958e4ee0c82b4b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "gDWE",
+      "code_hash": "e0ddcc61ac45ac0ed922e6d9e3b4a89a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "HgIA",
+      "code_hash": "84121d0f6ad3c917feafa4754971655f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"evaluation-functions-for-size-latency-and-accuracy\">Evaluation Functions for Size, Latency and Accuracy</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "modz",
+      "code_hash": "5ff00ed7356a092e2b922e305f03c6cb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "kUXW",
+      "code_hash": "e10dc862163984173b6574c01f2e39e8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "YgoZ",
+      "code_hash": "52bf01c37151069476b7ffdfeb56f3ba",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "IiQr",
+      "code_hash": "9c8fd7fd0dd158f1e9dd8058ace5e385",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"fine-tuning-the-teacher\">Fine-tuning the Teacher</h2>\n<blockquote>\n<span class=\"paragraph\">Note: This fine-tuning is required only in this example since the ResNet50 network was pretrained on ImageNet1K and we need to replace its output layer to match to CIFAR-10.</span>\n</blockquote></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
