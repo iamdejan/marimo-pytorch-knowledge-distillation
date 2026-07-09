@@ -19,7 +19,7 @@
       "console": []
     },
     {
-      "id": "eDeD",
+      "id": "MJUe",
       "code_hash": "64f82c06d632b82c3929b3d875219e9d",
       "outputs": [
         {
@@ -32,7 +32,7 @@
       "console": []
     },
     {
-      "id": "pusv",
+      "id": "vblA",
       "code_hash": "37089081a62aec093f90eecf67115ef3",
       "outputs": [
         {
@@ -45,7 +45,7 @@
       "console": []
     },
     {
-      "id": "fnFa",
+      "id": "bkHC",
       "code_hash": "d33f29545388c4febdb3eb114dcbaebd",
       "outputs": [
         {
@@ -65,7 +65,20 @@
       ]
     },
     {
-      "id": "JiMQ",
+      "id": "lEQa",
+      "code_hash": "dc782d5dd2cad4b407bbd888f30b8f45",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
       "code_hash": "3cd0238450c617655d4d015dacd6f557",
       "outputs": [
         {
@@ -78,7 +91,7 @@
       "console": []
     },
     {
-      "id": "NnbX",
+      "id": "Xref",
       "code_hash": "aa9eb8541ae409bc28d335a610967b3f",
       "outputs": [
         {
@@ -91,8 +104,8 @@
       "console": []
     },
     {
-      "id": "SDfA",
-      "code_hash": "a9be6a0bd96384a4f5385ca86364718a",
+      "id": "SFPL",
+      "code_hash": "76a268031cabf66ac5059a6ea84b0b98",
       "outputs": [
         {
           "type": "data",
@@ -111,8 +124,8 @@
       ]
     },
     {
-      "id": "sSft",
-      "code_hash": "abf7153aa7bcda0cbd87743e33c8c106",
+      "id": "BYtC",
+      "code_hash": "88afa79adf5c63256218b5396c78ce2b",
       "outputs": [
         {
           "type": "data",
@@ -124,7 +137,7 @@
       "console": []
     },
     {
-      "id": "WtpZ",
+      "id": "RGSE",
       "code_hash": "1839fe375144b01ac46962ed0466e23d",
       "outputs": [
         {
@@ -144,7 +157,7 @@
       ]
     },
     {
-      "id": "vcIS",
+      "id": "Kclp",
       "code_hash": "8f3d3b234ca49fe00c5e2568f90e8e71",
       "outputs": [
         {
@@ -157,7 +170,7 @@
       "console": []
     },
     {
-      "id": "YVtv",
+      "id": "emfo",
       "code_hash": "faa39a87263a4e969a540931c6ece6e8",
       "outputs": [
         {
@@ -170,7 +183,7 @@
       "console": []
     },
     {
-      "id": "VJJJ",
+      "id": "Hstk",
       "code_hash": "13731132c06deaa8ed79d83b7b3c3666",
       "outputs": [
         {
@@ -183,7 +196,7 @@
       "console": []
     },
     {
-      "id": "MiBx",
+      "id": "nWHF",
       "code_hash": "bb58f31192980b9b5efc62bd29f85a70",
       "outputs": [
         {
@@ -196,8 +209,8 @@
       "console": []
     },
     {
-      "id": "Eyyp",
-      "code_hash": "d193ddbd76ae65c550958e4ee0c82b4b",
+      "id": "iLit",
+      "code_hash": "b0f395771846c8f328da857d77b85dc0",
       "outputs": [
         {
           "type": "data",
@@ -209,20 +222,7 @@
       "console": []
     },
     {
-      "id": "gDWE",
-      "code_hash": "e0ddcc61ac45ac0ed922e6d9e3b4a89a",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "HgIA",
+      "id": "ROlb",
       "code_hash": "84121d0f6ad3c917feafa4754971655f",
       "outputs": [
         {
@@ -235,7 +235,7 @@
       "console": []
     },
     {
-      "id": "modz",
+      "id": "qnkX",
       "code_hash": "5ff00ed7356a092e2b922e305f03c6cb",
       "outputs": [
         {
@@ -248,8 +248,8 @@
       "console": []
     },
     {
-      "id": "kUXW",
-      "code_hash": "e10dc862163984173b6574c01f2e39e8",
+      "id": "TqIu",
+      "code_hash": "923c7fcf95e606a1f397dfc4ec0511e7",
       "outputs": [
         {
           "type": "data",
@@ -261,7 +261,7 @@
       "console": []
     },
     {
-      "id": "YgoZ",
+      "id": "Vxnm",
       "code_hash": "52bf01c37151069476b7ffdfeb56f3ba",
       "outputs": [
         {
@@ -274,7 +274,7 @@
       "console": []
     },
     {
-      "id": "IiQr",
+      "id": "DnEU",
       "code_hash": "9c8fd7fd0dd158f1e9dd8058ace5e385",
       "outputs": [
         {
@@ -285,6 +285,171 @@
         }
       ],
       "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "a9b38b044e16655de3914d0f84bb184a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "ecfG",
+      "code_hash": "555b6d8e7b21ca92e96d38e3df22c572",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "(Fine-tuning teacher)\tEpoch 1: loss=0.5722, Accuracy (validation): 81.52%\nNew best teacher model is saved.\n(Fine-tuning teacher)\tEpoch 2: loss=1.2847, Accuracy (validation): 50.18%\n(Fine-tuning teacher)\tEpoch 3: loss=0.8957, Accuracy (validation): 67.08%\n(Fine-tuning teacher)\tEpoch 4: loss=0.8168, Accuracy (validation): 72.92%\n(Fine-tuning teacher)\tEpoch 5: loss=0.5428, Accuracy (validation): 76.82%\n(Fine-tuning teacher)\tEpoch 6: loss=0.4757, Accuracy (validation): 77.38%\n(Fine-tuning teacher)\tEpoch 7: loss=0.2712, Accuracy (validation): 79.68%\n(Fine-tuning teacher)\tEpoch 8: loss=0.3845, Accuracy (validation): 79.10%\n(Fine-tuning teacher)\tEpoch 9: loss=0.4095, Accuracy (validation): 79.44%\n(Fine-tuning teacher)\tEpoch 10: loss=0.3188, Accuracy (validation): 79.42%\n(Fine-tuning teacher)\tEpoch 11: loss=0.2957, Accuracy (validation): 79.84%\n(Fine-tuning teacher)\tEpoch 12: loss=0.2490, Accuracy (validation): 80.14%\n(Fine-tuning teacher)\tEpoch 13: loss=0.1079, Accuracy (validation): 80.62%\n(Fine-tuning teacher)\tEpoch 14: loss=0.1729, Accuracy (validation): 79.50%\n(Fine-tuning teacher)\tEpoch 15: loss=0.1737, Accuracy (validation): 79.54%\n(Fine-tuning teacher)\tEpoch 16: loss=0.2060, Accuracy (validation): 79.78%\n(Fine-tuning teacher)\tEpoch 17: loss=0.1751, Accuracy (validation): 81.10%\n(Fine-tuning teacher)\tEpoch 18: loss=0.1325, Accuracy (validation): 80.22%\n(Fine-tuning teacher)\tEpoch 19: loss=0.0814, Accuracy (validation): 80.36%\n(Fine-tuning teacher)\tEpoch 20: loss=0.2472, Accuracy (validation): 80.20%\n(Fine-tuning teacher)\tEpoch 21: loss=0.1348, Accuracy (validation): 79.78%\n(Fine-tuning teacher)\tEpoch 22: loss=0.1060, Accuracy (validation): 79.28%\n(Fine-tuning teacher)\tEpoch 23: loss=0.1796, Accuracy (validation): 80.36%\n(Fine-tuning teacher)\tEpoch 24: loss=0.0923, Accuracy (validation): 80.86%\n(Fine-tuning teacher)\tEpoch 25: loss=0.2716, Accuracy (validation): 80.28%\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "yuSx",
+      "code_hash": "100ad715098675a8ca97d899d9463748",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"training-the-student-via-distillation\">Training the Student via Distillation</h2>\n<span class=\"paragraph\">The distillation loss is calculated with KL divergence on the student logits and teacher logits.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "OFIi",
+      "code_hash": "bca50da0a5afc5195a78bd5ee791c67d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "trZT",
+      "code_hash": "4fc8c3cc5bd04a7b7e5e77da2f3de032",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "xxvD",
+      "code_hash": "c7e2f6be4bb5b61ad38f9f698b167b23",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "[(Training student)\tEpoch 1] Loss = 2.9380 | Validation Acc = 59.54%\nNew best student model is saved.\n[(Training student)\tEpoch 2] Loss = 2.0131 | Validation Acc = 63.20%\nNew best student model is saved.\n[(Training student)\tEpoch 3] Loss = 1.7073 | Validation Acc = 66.60%\nNew best student model is saved.\n[(Training student)\tEpoch 4] Loss = 1.5300 | Validation Acc = 68.90%\nNew best student model is saved.\n[(Training student)\tEpoch 5] Loss = 1.3693 | Validation Acc = 68.84%\n[(Training student)\tEpoch 6] Loss = 1.2797 | Validation Acc = 70.64%\nNew best student model is saved.\n[(Training student)\tEpoch 7] Loss = 1.1634 | Validation Acc = 72.88%\nNew best student model is saved.\n[(Training student)\tEpoch 8] Loss = 1.1145 | Validation Acc = 70.98%\n[(Training student)\tEpoch 9] Loss = 1.0395 | Validation Acc = 72.68%\n[(Training student)\tEpoch 10] Loss = 1.0043 | Validation Acc = 73.92%\nNew best student model is saved.\n[(Training student)\tEpoch 11] Loss = 0.9343 | Validation Acc = 73.98%\nNew best student model is saved.\n[(Training student)\tEpoch 12] Loss = 0.8856 | Validation Acc = 74.50%\nNew best student model is saved.\n[(Training student)\tEpoch 13] Loss = 0.8679 | Validation Acc = 74.08%\n[(Training student)\tEpoch 14] Loss = 0.8712 | Validation Acc = 75.56%\nNew best student model is saved.\n[(Training student)\tEpoch 15] Loss = 0.8115 | Validation Acc = 74.36%\n[(Training student)\tEpoch 16] Loss = 0.7645 | Validation Acc = 75.00%\n[(Training student)\tEpoch 17] Loss = 0.7743 | Validation Acc = 73.10%\n[(Training student)\tEpoch 18] Loss = 0.7324 | Validation Acc = 75.36%\n[(Training student)\tEpoch 19] Loss = 0.7055 | Validation Acc = 74.24%\n[(Training student)\tEpoch 20] Loss = 0.7003 | Validation Acc = 75.42%\n[(Training student)\tEpoch 21] Loss = 0.6705 | Validation Acc = 73.72%\n[(Training student)\tEpoch 22] Loss = 0.7064 | Validation Acc = 74.90%\n[(Training student)\tEpoch 23] Loss = 0.6071 | Validation Acc = 75.52%\n[(Training student)\tEpoch 24] Loss = 0.5666 | Validation Acc = 75.82%\nNew best student model is saved.\n[(Training student)\tEpoch 25] Loss = 0.5482 | Validation Acc = 75.08%\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "sfno",
+      "code_hash": "3af404da437922ad3109907639a082c0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"model-comparison-code\">Model Comparison Code</h2>\n<span class=\"paragraph\">Finally we check the size of the teacher and student models, their latency and accuracy on test set.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "UZQK",
+      "code_hash": "6ae19012388785aa47f3f93418521849",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Teacher Params: 23.53M\nStudent Params: 11.18M\nTeacher Latency: 16.02 ms\nStudent Latency: 3.62 ms\nTeacher Test Accuracy: 80.81%\nStudent Test Accuracy: 75.96%\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "ycOQ",
+      "code_hash": "9ab04c0afce9fe4ad97ae5f2aa3a7123",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"training-a-baseline-student-resnet18-from-scratch\">Training a baseline student (ResNet18 from scratch)</h2>\n<span class=\"paragraph\">Although the student model is half the size and 40% the latency of the teacher model, its accuracy dropped from 85.10% to 79.24%. To determine whether this is still a better approach compared to training the student model directly on the data, we trained another student model for the same number of epochs without using knowledge distillation. We refer to this model as the \u201cbaseline student\u201d.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "dONA",
+      "code_hash": "30d18bdbd384c65a1f8bd3ba8cb9b05b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "(baseline-student)\tEpoch 1: loss=1.2312, Accuracy (validation): 55.82%\nNew best teacher model is saved.\n(baseline-student)\tEpoch 2: loss=1.2319, Accuracy (validation): 62.22%\nNew best teacher model is saved.\n(baseline-student)\tEpoch 3: loss=0.6946, Accuracy (validation): 65.86%\nNew best teacher model is saved.\n(baseline-student)\tEpoch 4: loss=0.7652, Accuracy (validation): 69.70%\nNew best teacher model is saved.\n(baseline-student)\tEpoch 5: loss=0.9150, Accuracy (validation): 68.64%\n(baseline-student)\tEpoch 6: loss=0.5177, Accuracy (validation): 71.38%\nNew best teacher model is saved.\n(baseline-student)\tEpoch 7: loss=0.3241, Accuracy (validation): 70.92%\n(baseline-student)\tEpoch 8: loss=0.3591, Accuracy (validation): 71.56%\nNew best teacher model is saved.\n(baseline-student)\tEpoch 9: loss=0.4612, Accuracy (validation): 71.26%\n(baseline-student)\tEpoch 10: loss=0.3271, Accuracy (validation): 71.48%\n(baseline-student)\tEpoch 11: loss=0.0999, Accuracy (validation): 71.24%\n(baseline-student)\tEpoch 12: loss=0.2624, Accuracy (validation): 69.44%\n(baseline-student)\tEpoch 13: loss=0.1039, Accuracy (validation): 72.42%\nNew best teacher model is saved.\n(baseline-student)\tEpoch 14: loss=0.2179, Accuracy (validation): 70.78%\n(baseline-student)\tEpoch 15: loss=0.0743, Accuracy (validation): 71.66%\n(baseline-student)\tEpoch 16: loss=0.1212, Accuracy (validation): 70.56%\n(baseline-student)\tEpoch 17: loss=0.1285, Accuracy (validation): 71.34%\n(baseline-student)\tEpoch 18: loss=0.0637, Accuracy (validation): 72.06%\n(baseline-student)\tEpoch 19: loss=0.0428, Accuracy (validation): 70.46%\n(baseline-student)\tEpoch 20: loss=0.2330, Accuracy (validation): 70.90%\n(baseline-student)\tEpoch 21: loss=0.0574, Accuracy (validation): 71.72%\n(baseline-student)\tEpoch 22: loss=0.0604, Accuracy (validation): 71.38%\n(baseline-student)\tEpoch 23: loss=0.1312, Accuracy (validation): 70.52%\n(baseline-student)\tEpoch 24: loss=0.0542, Accuracy (validation): 71.56%\n(baseline-student)\tEpoch 25: loss=0.1923, Accuracy (validation): 70.48%\n\nBaseline Student Test Accuracy: 71.88%\n",
+          "mimetype": "text/plain"
+        }
+      ]
     }
   ]
 }

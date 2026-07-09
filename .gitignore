@@ -1,6 +1,10 @@
 # Dataset
 /data
 
+# Model files
+/models
+/__marimo__/cache/
+
 # pixi environments
 .pixi/*
 !.pixi/config.toml
