@@ -3,9 +3,9 @@ title: Readme
 marimo-version: 0.23.13
 ---
 
-# Python Pixi Template
+# Marimo PyTorch Knowledge Distillation
 
-This is a template repository for Python-based projects, using Pixi as a version manager for Python.
+Marimo project for me to learn knowledge distillation using PyTorch.
 
 ## Prerequisites
 
@@ -16,11 +16,6 @@ Before running this program, ensure you have the following installed:
 2. **Download Dependencies** - Once Pixi is installed, run the following command to download all project dependencies:
    ```bash
    pixi install
-   ```
-
-3. **Pre-commit Hooks** - Install the pre-commit hooks to ensure code quality:
-   ```bash
-   pixi run pre-commit install --hook-type pre-push
    ```
 
 ## Run the Program
@@ -34,55 +29,89 @@ Use Pixi to run it:
 
 | Command | Description |
 |---------|-------------|
-| `pixi run test` | Build and run all unit tests |
-| `pixi run lint-ci` | Run lint check using ruff |
-| `pixi run lint-fix` | Auto-fix linting issues using ruff |
-| `pixi run type-check` | Run type checking using mypy |
+| `pixi run lint` | Run lint check using marimo check |
+| `pixi run lint-fix` | Auto-fix linting issues using marimo check |
 
 ## Project Structure
 
 ```
 Root/
-├── pixi.toml               # Pixi workspace configuration
-├── pixi.lock               # Pixi lockfile
-├── pyproject.toml          # Python project configuration
-├── main.py                 # Marimo notebook
-├── AGENTS.md               # Agent rules and guidelines
-├── .gitignore              # Git ignore rules
-├── .gitattributes          # Git attributes
-├── .editorconfig           # Editor configuration
-├── .pre-commit-config.yaml # Pre-commit configuration
-├── LICENSE.txt             # Project license
-├── README.md               # Project documentation
-├── .github/                # GitHub workflows
-│   └── workflows/
-│       ├── pr-pipeline.yaml
-│       └── trunk-pipeline.yaml
-├── .kilocode/              # Kilo Code assistant configuration
-│   └── mcp.json
+├── pixi.toml                        # Pixi workspace configuration
+├── pixi.lock                        # Pixi lockfile (reproducible builds)
+├── pyproject.toml                   # Python project configuration (ruff, mypy)
+├── main.py                          # Marimo notebook: custom CNN knowledge distillation
+├── resnet.py                        # Marimo notebook: ResNet50→ResNet18 distillation
+├── utils.py                         # Shared utility: deterministic DataLoader worker seeding
+├── main.pdf                         # Exported PDF of the main notebook
+├── resnet.pdf                       # Exported PDF of the resnet notebook
+├── AGENTS.md                        # Agent rules and guidelines for code generation
+├── .gitignore                       # Git ignore rules (data/, models/, caches, etc.)
+├── .gitattributes                   # Git attributes (pixi.lock as binary)
+├── .editorconfig                    # Editor configuration (consistent indentation)
+├── .pre-commit-config.yaml          # Pre-commit hook configuration
+├── LICENSE.txt                      # Project license (MIT No Attribution)
+├── README.md                        # Project documentation
+├── __marimo__/                      # Marimo internal session state and cache
+│   ├── cache/
+│   │   ├── train_teacher/           # Cached teacher training results
+│   │   └── train_student/           # Cached student training results
+│   └── session/                     # Notebook cell execution metadata (JSON)
+├── data/                            # CIFAR-10 dataset (gitignored)
+│   ├── cifar-10-python.tar.gz
+│   └── cifar-10-batches-py/
+├── models/                          # Saved model checkpoints (gitignored)
+│   ├── baseline_student.pt          # ResNet18 student trained from scratch
+│   ├── student_distilled.pt         # ResNet18 student trained via distillation
+│   └── tuned_pretrained_resnet50_on_CIFAR10.pt  # Fine-tuned ResNet50 teacher
+├── .github/workflows/               # GitHub Actions CI/CD pipelines
+│   ├── pr-pipeline.yaml             # Lint check on pull requests
+│   └── trunk-pipeline.yaml          # Lint check on pushes to main
+├── .kilocode/                       # Kilo Code assistant configuration
+│   ├── mcp.json                     # MCP server setup (PyPI queries)
+│   └── node_modules/                # Kilo Code extension runtime dependencies
+└── .pixi/                           # Pixi-managed Python environment (gitignored)
 ```
 
 This section explains the purpose of each file in the repository:
+
+### Marimo Notebooks
+
+| File | Description |
+|------|-------------|
+| [`main.py`](main.py) | Pedagogical walkthrough implementing three knowledge distillation techniques (standard KL-divergence KD, cosine embedding loss on hidden representations, MSE loss with learnable regressor) using custom lightweight CNNs (`DeepNN` teacher, `LightNN` student) on CIFAR-10. |
+| [`resnet.py`](resnet.py) | Advanced knowledge distillation using real ResNet architectures. Fine-tunes a pretrained ResNet50 teacher, then distills into a ResNet18 student via multi-layer hint-based distillation with `FeatureProjector` layers aligning intermediate block features. Includes model size, latency, and accuracy comparisons against a baseline student trained from scratch. |
+| [`utils.py`](utils.py) | Shared utility module providing `seed_worker()` — a deterministic `worker_init_fn` for PyTorch `DataLoader` to ensure reproducible batch sampling across worker processes. |
 
 ### Root Directory Files
 
 | File | Description |
 |------|-------------|
-| [`pixi.toml`](pixi.toml) | Pixi workspace configuration file that defines the project dependencies, tasks, and build settings. |
+| [`pixi.toml`](pixi.toml) | Pixi workspace configuration defining project dependencies (Python 3.13, PyTorch GPU, torchvision, marimo, etc.), tasks (`start`, `lint`, `lint-fix`), and build settings. Supports `default` (GPU) and `cicd` (CPU) environments. |
 | [`pixi.lock`](pixi.lock) | Lockfile generated by Pixi to ensure reproducible builds across different environments. |
-| [`pyproject.toml`](pyproject.toml) | Python project configuration file containing tool settings for ruff, mypy, and other Python tools. |
-| [`main.py`](main.py) | Marimo notebook. |
-| [`AGENTS.md`](AGENTS.md) | Agent rules and guidelines for code generation and validation in this project. |
-| [`.gitignore`](.gitignore) | Git ignore rules specifying which files and directories should be excluded from version control. |
-| [`.gitattributes`](.gitattributes) | Git attributes configuration for handling file types and line endings. |
-| [`.editorconfig`](.editorconfig) | Editor configuration that ensures consistent coding styles across different editors and IDEs. |
+| [`pyproject.toml`](pyproject.toml) | Python project configuration with ruff linter/formatter settings (E4/E7/E9/F/B rules, 120-char line length, double-quote formatting). |
+| [`AGENTS.md`](AGENTS.md) | Agent rules and guidelines for code generation, testing standards (pytest, NumPy-style docstrings, type annotations), and validation workflow in this project. |
+| [`.gitignore`](.gitignore) | Git ignore rules excluding `data/`, `models/`, `__marimo__/cache/`, `.pixi/`, `__pycache__/`, and other generated/IDE files. |
+| [`.gitattributes`](.gitattributes) | Git attributes marking `pixi.lock` as binary for merge safety. |
+| [`.editorconfig`](.editorconfig) | Editor configuration enforcing consistent indentation (4-space for `.py`/`.toml`, 2-space for `.md`), trailing newlines, and UTF-8 encoding. |
 | [`.pre-commit-config.yaml`](.pre-commit-config.yaml) | Pre-commit hook configuration for running checks before commits. |
-| [`LICENSE.txt`](LICENSE.txt) | Project license file. |
-| [`README.md`](README.md) | Project documentation containing setup instructions, available commands, and project structure. |
+| [`LICENSE.txt`](LICENSE.txt) | Project license file (MIT No Attribution, copyright 2026). |
+| [`README.md`](README.md) | Project documentation containing setup instructions, available commands, and project structure reference. |
+| [`main.pdf`](main.pdf) | Exported PDF rendering of the `main.py` Marimo notebook. |
+| [`resnet.pdf`](resnet.pdf) | Exported PDF rendering of the `resnet.py` Marimo notebook. |
 
 ### Configuration Directories
 
 | Directory | Description |
 |-----------|-------------|
-| [`.github/workflows/`](.github/workflows) | GitHub Actions workflow files for CI/CD pipelines. Contains `pr-pipeline.yaml` for pull request checks and `trunk-pipeline.yaml` for trunk-based development. |
-| [`.kilocode/`](.kilocode) | Kilo Code assistant configuration file. Contains `mcp.json` for MCP server setup. |
+| [`.github/workflows/`](.github/workflows) | GitHub Actions workflow files for CI/CD. `pr-pipeline.yaml` runs lint on pull requests; `trunk-pipeline.yaml` runs lint on pushes to `main`. |
+| [`.kilocode/`](.kilocode) | Kilo Code IDE assistant configuration. `mcp.json` sets up a PyPI MCP server for package metadata queries. `node_modules/` contains extension runtime dependencies. |
+| [`.pixi/`](.pixi) | Pixi-managed isolated Python environment containing all installed dependencies (PyTorch GPU, torchvision, marimo, etc.). Gitignored. |
+
+### Data and Output Directories
+
+| Directory | Description |
+|-----------|-------------|
+| `__marimo__/` | Marimo internal state directory. `cache/` stores pickled results of `@mo.persistent_cache`-decorated training functions to avoid redundant computation. `session/` stores notebook cell execution metadata as JSON. |
+| `data/` | CIFAR-10 dataset — compressed archive and extracted batch files. Gitignored due to ~170 MB size. |
+| `models/` | Trained model checkpoints saved as `.pt` `state_dict` files. Contains fine-tuned teacher, distilled student, and baseline student. Gitignored due to ~190 MB total size. |
+
