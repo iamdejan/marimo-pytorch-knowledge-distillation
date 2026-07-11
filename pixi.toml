@@ -10,10 +10,10 @@ start = "marimo edit --headless --port 3000"
 lint = "marimo check --ignore-scripts ."
 lint-fix = "marimo check --ignore-scripts --fix ."
 
-[tasks.run]
+[tasks.execute]
 cmd = "marimo export session {{ notebook_filename }}"
 
-  [[tasks.run.args]]
+  [[tasks.execute.args]]
   arg = "notebook_filename"
 
 [dependencies]
