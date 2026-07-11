@@ -1,3 +1,15 @@
+[tool.marimo.language_servers.pylsp]
+enabled = true
+enable_mypy = true
+enable_ruff = true
+enable_flake8 = false
+enable_pydocstyle = false
+enable_pylint = false
+enable_pyflakes = false
+
+[tool.marimo.diagnostics]
+enabled = true
+
 [tool.ruff]
 target-version = "py312"
 line-length = 120
