@@ -65,7 +65,7 @@ def _(torch):
         # Force use of deterministic algorithms (PyTorch 1.7+)
         torch.use_deterministic_algorithms(True)
 
-    return (set_seed,)
+    return os, set_seed
 
 
 @app.cell(hide_code=True)
@@ -158,7 +158,7 @@ def _(test_set, train_set, validation_set):
 
     train_loader = DataLoader(train_set, batch_size=256, shuffle=True)
     validation_loader = DataLoader(validation_set, batch_size=256, shuffle=False)
-    test_loader = DataLoader(test_set, batch_size=256, shuffle=False)
+    test_loader = DataLoader(test_set, batch_size=512, shuffle=False)
     return test_loader, train_loader, validation_loader
 
 
@@ -205,10 +205,9 @@ def _(nn, torch):
 
 
 @app.cell
-def _(mo, nn, torch, weights):
+def _(mo, nn, os, torch, weights):
     BEST_TEACHER_MODEL_PATH = "./models/practice/best_teacher_model.pt"
 
-    @mo.persistent_cache
     def train_teacher(
         model,
         train_loader,
@@ -217,6 +216,10 @@ def _(mo, nn, torch, weights):
         epochs=30,
         device=torch.device("cpu"),
     ):
+        if os.path.exists(BEST_TEACHER_MODEL_PATH):
+            model.load_state_dict(torch.load(BEST_TEACHER_MODEL_PATH), strict=True)
+            return model
+
         model = model.to(device)
         criterion = nn.CrossEntropyLoss(torch.tensor(weights, device=device))
         optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
@@ -284,14 +287,13 @@ def _(
     set_seed(42)
     teacher = setup_teacher()
     teacher = train_teacher(teacher, train_loader, validation_loader, device=device)
-    return
+    return (teacher,)
 
 
 @app.cell
-def _(mo, model, test_loader, torch):
+def _(device, teacher, test_loader, torch):
     from sklearn.metrics import classification_report
 
-    @mo.persistent_cache
     def evaluate_teacher(
         model,
         test_loader,
@@ -319,7 +321,7 @@ def _(mo, model, test_loader, torch):
         # Generate report on the full dataset
         print(classification_report(all_trues, all_predictions))
 
-    evaluate_teacher(model, test_loader)
+    evaluate_teacher(teacher, test_loader, device=device)
     return
 
 
@@ -351,10 +353,9 @@ def _(models, nn, torch):
 
 
 @app.cell
-def _(mo, nn, torch, weights):
+def _(mo, nn, os, torch, weights):
     BEST_STUDENT_MODEL_PATH = "./models/practice/best_student_model.pt"
 
-    @mo.persistent_cache
     def train_student(
         teacher,
         student,
@@ -365,10 +366,16 @@ def _(mo, nn, torch, weights):
         T=2,
         soft_targets_loss_weight=0.2,
         cross_entropy_loss_weight=0.8,
-        device=torch.device("cpu"),
+        device="cpu",
     ):
-        teacher = teacher.to(device)
-        student = student.to(device)
+        device = torch.device(device)
+
+        if os.path.exists(BEST_STUDENT_MODEL_PATH):
+            student.load_state_dict(torch.load(BEST_STUDENT_MODEL_PATH), strict=True)
+            return student
+
+        teacher.to(device)
+        student.to(device)
 
         teacher.eval()
 
@@ -408,7 +415,7 @@ def _(mo, nn, torch, weights):
                         + cross_entropy_loss_weight * label_loss
                     )
 
-                    label_loss.backward()
+                    loss.backward()
                     optimizer.step()
 
                     running_loss += loss.item()
@@ -449,13 +456,14 @@ def _(
     device,
     set_seed,
     setup_student,
+    teacher,
     train_loader,
     train_student,
     validation_loader,
 ):
     set_seed(42)
     student = setup_student()
-    student = train_student(student, train_loader, validation_loader, device=device)
+    student = train_student(teacher, student, train_loader, validation_loader, device=device)
     return
 
 
